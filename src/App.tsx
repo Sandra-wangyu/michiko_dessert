@@ -971,9 +971,19 @@ function OrderFormModal({
             <h3 className="text-lg font-medium text-gray-800 mb-4">訂購品項</h3>
             <div className="space-y-2">
               {cart.map(item => (
-                <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                  <span className="text-gray-700">{item.name} × {item.quantity}</span>
+                <div key={`${item.id}-${item.selectedOption}-${item.coverStyle}`} className="py-3 border-b border-gray-200 last:border-b-0">
+                  <div className="flex justify-between items-start">
+                    <div className="flex-1">
+                      <div className="text-gray-800 font-medium">{item.name} × {item.quantity}</div>
+                      {item.selectedOption && (
+                        <div className="text-sm text-gray-600 mt-1">內容：{item.selectedOption}</div>
+                      )}
+                      {item.coverStyle && (
+                        <div className="text-sm text-gray-500 mt-1">封面：{item.coverStyle}</div>
+                      )}
+                    </div>
                   <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
+                  </div>
                 </div>
               ))}
             </div>
