@@ -66,7 +66,7 @@ const products: Product[] = [
     name: "好日子蛋黃酥",
     description: "闆娘親手製作，真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
     price: 65,
-    image: "/S__40509442.jpg",
+    image: "/egg_single.jpg",
     category: "單品",
     weight: "75g",
     ingredients: "烏豆沙餡〔圓雲豆、蔗糖、麥芽糖、台灣19號奶油、大豆油、甜味劑(赤藻醣醇)、海藻糖、麥芽糊精、玫瑰鹽、黏稠劑(玉米糖膠)〕、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、鹹蛋黃（含花生油）、砂糖、水、蛋黃、黑芝麻",
@@ -77,7 +77,7 @@ const products: Product[] = [
     name: "好日子綠豆椪",
     description: "綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g，不含豬油清爽口感",
     price: 60,
-    image: "/S__40509452_0.jpg",
+    image: "/single.jpg",
     category: "單品",
     weight: "70g",
     ingredients: "綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水",
@@ -228,7 +228,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/image.png)',
+            backgroundImage: 'url(/BN01.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -489,7 +489,7 @@ function App() {
                 <div className="text-center mb-4">
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/S__40509442.jpg" 
+                      src="/egg_single.jpg" 
                       alt="好日子蛋黃酥"
                       className="w-full h-full object-cover"
                     />
@@ -518,7 +518,7 @@ function App() {
                 <div className="text-center mb-4">
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/S__40509452_0.jpg" 
+                      src="/single.jpg" 
                       alt="好日子綠豆椪"
                       className="w-full h-full object-cover"
                     />
