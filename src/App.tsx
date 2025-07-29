@@ -336,14 +336,14 @@ function App() {
               <div className="bg-white p-6 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-4">
                   <Heart className="w-6 h-6 text-amber-500 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">🍂 闆娘手作，讓點心也有溫度</h3>
+                  <h3 className="text-xl font-medium text-gray-800">闆娘手作，讓點心也有溫度</h3>
                 </div>
                 <div className="text-gray-600 leading-relaxed space-y-2 text-sm font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
-                  <p>✿ 每一顆都由闆娘親手製作，用心手包，只為你入口那一刻的幸福感</p>
-                  <p>✿ 餅皮全程不含豬油，選用植物油與高品質奶油，口感清爽、不油膩（蛋奶素可食）</p>
+                  <p>✿ 每一顆都由闆娘親手製作，用心手包，酥到掉渣</p>
+                  <p>✿ 不含豬油，選用植物油與台灣LV奶油，口感清爽不油膩（蛋奶素）</p>
                   <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎碎蛋或半顆唬弄版本！</p>
-                  <p>✿ 不吃鹹蛋？也可選擇綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g</p>
-                  <p>✿ 全品項皆使用台灣之光「19號發酵奶油」，乳香濃郁，媲美歐洲頂級奶油</p>
+                  <p>✿ 不吃鹹蛋？也可選擇綿密細緻的綠豆餡，內餡重達40g</p>
+                  <p>✿ 全品項皆使用台灣之光「19號奶油」，在地生產，媲美歐洲頂級奶油</p>
                   <p className="font-medium text-amber-600">✨ 此次酥皮全面升級，真的好～酥！</p>
                 </div>
               </div>
@@ -354,7 +354,7 @@ function App() {
                   <h3 className="text-lg font-medium text-gray-800">嚴選食材</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
-                  <div>• 台灣19號發酵奶油</div>
+                  <div>• LV等級的台灣19號奶油</div>
                   <div>• 嘉禾粉心粉</div>
                   <div>• 新鮮鹹蛋黃</div>
                   <div>• 綠豆沙餡</div>
@@ -379,7 +379,7 @@ function App() {
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
                   <img 
                     src="/S__40509450_0.jpg" 
-                    alt="精緻甜點" 
+                    alt="手作甜點" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -416,7 +416,7 @@ function App() {
       <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-gray-800 mb-4">🎁 關於這次的禮盒</h2>
+            <h2 className="text-3xl font-light text-gray-800 mb-4">這次，我們用更環保的方式裝載心意</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
           </div>
           
@@ -432,10 +432,10 @@ function App() {
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-6">
-                  <h3 className="text-xl font-medium mb-2">精緻包裝設計</h3>
+                  <h3 className="text-xl font-medium mb-2">角釘盒包裝</h3>
                   <p className="text-sm leading-relaxed opacity-90">
                     無膠角釘禮盒，100% 再生牛奶盒紙板<br />
-                    環保材質，溫柔設計
+                    環保材質，溫潤質感
                   </p>
                 </div>
               </div>
@@ -454,7 +454,7 @@ function App() {
                   <h3 className="text-xl font-medium mb-2">無墨壓印工藝</h3>
                   <p className="text-sm leading-relaxed opacity-90">
                     LOGO 採用無墨壓印，不上色、不燙金<br />
-                    值得被留下來的溫柔設計
+                    值得被留下來被回憶的禮盒
                   </p>
                 </div>
               </div>
@@ -470,7 +470,7 @@ function App() {
               <p className="text-lg">
                 LOGO 採用無墨壓印工藝，不上色、不燙金，<br />
                 我們希望這份禮盒，不只是中秋後的垃圾，<br />
-                而是能被留下來的溫柔設計。
+                而是能被留下來的記憶。
               </p>
             </div>
           </div>
@@ -504,7 +504,7 @@ function App() {
               <div className="text-center">
                 <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
                   <img 
-                    src="/cat_page-0001.jpg" 
+                    src="/cat2_page-0001.jpg"               
                     alt="厭世貓封面" 
                     className="w-full h-full object-cover"
                   />
@@ -520,7 +520,7 @@ function App() {
               <div className="text-center">
                 <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
                   <img 
-                    src="/cat2_page-0001.jpg" 
+                    src="/cat_page-0001.jpg" 
                     alt="慵懶貓封面" 
                     className="w-full h-full object-cover"
                   />
@@ -549,7 +549,7 @@ function App() {
             <h2 className="text-4xl font-light text-gray-800 mb-4">商品選購</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              每一款甜點都是闆娘的用心之作，選用最優質的食材，呈現最完美的味覺體驗
+              每一款都是闆娘的用心之作，選用最優質的食材，給家人吃的心意。
             </p>
           </div>
 
