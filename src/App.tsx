@@ -8,13 +8,15 @@ interface Product {
   price: number;
   image: string;
   category: string;
-  weight?: string;
-  ingredients?: string;
-  allergens?: string;
+  type: 'combo' | 'single';
+  options?: string[];
+  hasVariants?: boolean;
 }
 
 interface CartItem extends Product {
   quantity: number;
+  selectedOption?: string;
+  coverStyle?: string;
 }
 
 interface OrderData {
@@ -31,57 +33,43 @@ interface OrderData {
 const products: Product[] = [
   {
     id: 1,
-    name: "六入綜合組",
-    description: "內容物：3顆蛋黃酥+3顆綠豆椪\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
+    name: "六入好日組",
+    description: "請選擇您喜愛的組合搭配",
     price: 390,
     image: "/S__40509450_0.jpg",
-    category: "組合A"
+    category: "組合A",
+    type: "combo",
+    options: ["蛋黃酥 3 + 綠豆椪 3", "蛋黃酥 6", "綠豆椪 6"],
+    hasVariants: true
   },
   {
     id: 2,
     name: "六入磅蛋糕組",
-    description: "內容物：蛋黃酥2+綠豆椪1 ＋ 檸檬磅蛋糕 4 片\n✅ 中式 x 西點甜點混搭組合，送禮自享兩相宜\n✅ 嚴選嘉禾粉心粉 × 台灣19號奶油，口感更升級",
+    description: "中式 x 西點甜點混搭組合，送禮自享兩相宜",
     price: 399,
     image: "/S__40509453_0.jpg",
-    category: "組合B"
+    category: "組合B",
+    type: "combo",
+    options: ["蛋黃酥 3 + 檸檬磅蛋糕 4 片", "綠豆椪 3 + 檸檬磅蛋糕 4 片"],
+    hasVariants: true
   },
   {
     id: 3,
-    name: "六入蛋黃酥組",
-    description: "內容物：6 顆蛋黃酥\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
-    price: 390,
-    image: "/S__40509442.jpg",
-    category: "組合C"
-  },
-  {
-    id: 4,
-    name: "六入綠豆椪組",
-    description: "內容物：6 顆綠豆椪\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
-    price: 390,
-    image: "/S__40509452_0.jpg",
-    category: "組合D"
-  },
-  {
-    id: 5,
     name: "好日子蛋黃酥",
     description: "闆娘親手製作，真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
     price: 65,
     image: "/egg_single.jpg",
     category: "單品",
-    weight: "75g",
-    ingredients: "烏豆沙餡〔圓雲豆、蔗糖、麥芽糖、台灣19號奶油、大豆油、甜味劑(赤藻醣醇)、海藻糖、麥芽糊精、玫瑰鹽、黏稠劑(玉米糖膠)〕、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、鹹蛋黃（含花生油）、砂糖、水、蛋黃、黑芝麻",
-    allergens: "本產品含有蛋類、奶類、芝麻、大豆、小麥、花生及其製品，不適合其過敏體質者食用。"
+    type: "single"
   },
   {
-    id: 6,
+    id: 4,
     name: "好日子綠豆椪",
     description: "綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g，不含豬油清爽口感",
     price: 60,
     image: "/single.jpg",
     category: "單品",
-    weight: "70g",
-    ingredients: "綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水",
-    allergens: "本產品含有奶類、小麥及其製品，不適合其過敏體質者食用。"
+    type: "single"
   },
 ];
 
@@ -102,6 +90,35 @@ function App() {
         );
       }
       return [...prevCart, { ...product, quantity }];
+    });
+  };
+
+  const addToCartWithOptions = (product: Product, quantity: number = 1, selectedOption?: string, coverStyle?: string) => {
+    const cartItem: CartItem = {
+      ...product,
+      quantity,
+      selectedOption,
+      coverStyle
+    };
+    
+    setCart(prevCart => {
+      // 對於有選項的商品，需要檢查選項是否相同
+      const existingItem = prevCart.find(item => 
+        item.id === product.id && 
+        item.selectedOption === selectedOption &&
+        item.coverStyle === coverStyle
+      );
+      
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === product.id && 
+          item.selectedOption === selectedOption &&
+          item.coverStyle === coverStyle
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
+      return [...prevCart, cartItem];
     });
   };
 
@@ -436,7 +453,7 @@ function App() {
               <ProductCard
                 key={product.id}
                 product={product}
-                onAddToCart={addToCart}
+                onAddToCart={addToCartWithOptions}
               />
             ))}
           </div>
@@ -627,8 +644,23 @@ function App() {
 }
 
 // Product Card Component
-function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: (product: Product, quantity: number) => void }) {
+function ProductCard({ product, onAddToCart }: { 
+  product: Product; 
+  onAddToCart: (product: Product, quantity: number, selectedOption?: string, coverStyle?: string) => void 
+}) {
   const [quantity, setQuantity] = useState(1);
+  const [selectedOption, setSelectedOption] = useState(product.options?.[0] || '');
+  const [coverStyle, setCoverStyle] = useState('');
+
+  const coverOptions = ['哈欠狗', '厭世貓', '慵懶貓'];
+
+  const handleAddToCart = () => {
+    if (product.type === 'combo' && !selectedOption) {
+      alert('請選擇商品組合');
+      return;
+    }
+    onAddToCart(product, quantity, selectedOption, coverStyle || '隨機出貨');
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -646,7 +678,49 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
           </span>
         </div>
         <h3 className="text-xl font-medium text-gray-800 mb-2">{product.name}</h3>
-        <div className="text-gray-600 text-sm leading-relaxed mb-4 whitespace-pre-line">{product.description}</div>
+        <div className="text-gray-600 text-sm leading-relaxed mb-4">{product.description}</div>
+        
+        {/* 組合選項 */}
+        {product.type === 'combo' && product.options && (
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              選擇組合 *
+            </label>
+            <select
+              value={selectedOption}
+              onChange={(e) => setSelectedOption(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm"
+            >
+              {product.options.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
+        {/* 封面款式選擇 (僅組合商品) */}
+        {product.type === 'combo' && (
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              封面款式 (可選)
+            </label>
+            <select
+              value={coverStyle}
+              onChange={(e) => setCoverStyle(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm"
+            >
+              <option value="">隨機出貨</option>
+              {coverOptions.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-medium text-amber-600">NT$ {product.price}</span>
           <div className="flex items-center space-x-2">
@@ -665,8 +739,16 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
             </button>
           </div>
         </div>
+        
+        {/* 統一加註說明 */}
+        {product.type === 'combo' && (
+          <p className="text-xs text-gray-500 mb-4 text-center">
+            若未備註封面款式，將隨機出貨
+          </p>
+        )}
+        
         <button
-          onClick={() => onAddToCart(product, quantity)}
+          onClick={handleAddToCart}
           className="w-full bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-full font-medium transition-colors"
         >
           加入購物車
@@ -721,6 +803,12 @@ function CartSidebar({
                   </div>
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-800">{item.name}</h3>
+                    {item.selectedOption && (
+                      <p className="text-xs text-gray-600">{item.selectedOption}</p>
+                    )}
+                    {item.coverStyle && (
+                      <p className="text-xs text-gray-500">封面：{item.coverStyle}</p>
+                    )}
                     <p className="text-amber-600">NT$ {item.price}</p>
                     <div className="flex items-center space-x-2 mt-2">
                       <button
