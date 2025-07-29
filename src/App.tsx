@@ -642,6 +642,16 @@ function App() {
                     <span className="font-medium text-red-700">過敏原：</span>
                     <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、芝麻、大豆、小麥、花生及其製品，不適合其過敏體質者食用。</p>
                   </div>
+                  <div className="mt-3">
+                    <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
+                    <div className="bg-gray-50 p-2 rounded-lg">
+                      <img 
+                        src="/image.png" 
+                        alt="營養標示"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -671,6 +681,16 @@ function App() {
                     <span className="font-medium text-red-700">過敏原：</span>
                     <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有奶類、小麥及其製品，不適合其過敏體質者食用。</p>
                   </div>
+                  <div className="mt-3">
+                    <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
+                    <div className="bg-gray-50 p-2 rounded-lg">
+                      <img 
+                        src="/image.png" 
+                        alt="營養標示"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -699,6 +719,16 @@ function App() {
                   <div className="bg-red-50 p-3 rounded-lg">
                     <span className="font-medium text-red-700">過敏原：</span>
                     <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。</p>
+                  </div>
+                  <div className="mt-3">
+                    <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
+                    <div className="bg-gray-50 p-2 rounded-lg">
+                      <img 
+                        src="/image.png" 
+                        alt="營養標示"
+                        className="w-full h-auto"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
