@@ -540,7 +540,6 @@ function App() {
               <p className="text-xs">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
             </div>
           </div>
-          </div>
       </section>
 
       {/* Products Section */}
