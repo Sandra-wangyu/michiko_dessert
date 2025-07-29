@@ -804,7 +804,7 @@ function CartSidebar({
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-800">{item.name}</h3>
                     {item.selectedOption && (
-                      <p className="text-xs text-gray-600">{item.selectedOption}</p>
+                      <p className="text-xs text-gray-600">內容：{item.selectedOption}</p>
                     )}
                     {item.coverStyle && (
                       <p className="text-xs text-gray-500">封面：{item.coverStyle}</p>
