@@ -485,61 +485,53 @@ function App() {
             {/* 三張角色 Banner */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* 哈欠狗 */}
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="/dog_page-0001.jpg" 
-                  alt="哈欠狗封面" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4">
-                    <h4 className="text-lg font-medium mb-2">哈欠狗</h4>
-                    <p className="text-sm leading-relaxed opacity-90">
-                      慵懶可愛的哈欠表情<br />
-                      療癒系角色設計
-                    </p>
-                  </div>
+              <div className="text-center">
+                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <img 
+                    src="/dog_page-0001.jpg" 
+                    alt="哈欠狗封面" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                <h4 className="text-lg font-medium mb-2 text-gray-800">哈欠狗</h4>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  慵懶可愛的哈欠表情<br />
+                  療癒系角色設計
+                </p>
               </div>
 
               {/* 厭世貓 */}
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="/cat_page-0001.jpg" 
-                  alt="厭世貓封面" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4">
-                    <h4 className="text-lg font-medium mb-2">厭世貓</h4>
-                    <p className="text-sm leading-relaxed opacity-90">
-                      經典厭世表情<br />
-                      都市人的心聲代表
-                    </p>
-                  </div>
+              <div className="text-center">
+                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <img 
+                    src="/cat_page-0001.jpg" 
+                    alt="厭世貓封面" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                <h4 className="text-lg font-medium mb-2 text-gray-800">厭世貓</h4>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  經典厭世表情<br />
+                  都市人的心聲代表
+                </p>
               </div>
 
               {/* 慵懶貓 */}
-              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="/cat2_page-0001.jpg" 
-                  alt="慵懶貓封面" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4">
-                    <h4 className="text-lg font-medium mb-2">慵懶貓</h4>
-                    <p className="text-sm leading-relaxed opacity-90">
-                      放鬆慵懶的姿態<br />
-                      享受悠閒時光
-                    </p>
-                  </div>
+              <div className="text-center">
+                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                  <img 
+                    src="/cat2_page-0001.jpg" 
+                    alt="慵懶貓封面" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                <h4 className="text-lg font-medium mb-2 text-gray-800">慵懶貓</h4>
+                <p className="text-sm leading-relaxed text-gray-600">
+                  放鬆慵懶的姿態<br />
+                  享受悠閒時光
+                </p>
               </div>
+            </div>
             </div>
             
             {/* 底部說明文字 */}
