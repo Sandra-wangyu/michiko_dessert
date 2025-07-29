@@ -779,7 +779,7 @@ function App() {
           {/* Social Media Links */}
           <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
             <a 
-              href="https://www.facebook.com/michiko咪匠人好食" 
+              href="https://www.facebook.com/michikodessert/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
@@ -788,7 +788,7 @@ function App() {
               <span className="text-sm">michiko咪匠人好食</span>
             </a>
             <a 
-              href="https://www.instagram.com/michiko咪匠人好食" 
+              href="https://www.instagram.com/michiko_dessert/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition-colors duration-200"
