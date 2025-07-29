@@ -539,7 +539,6 @@ function App() {
               <p className="text-lg">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
               <p className="text-sm">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
             </div>
-          </div>
         </div>
       </section>
 
