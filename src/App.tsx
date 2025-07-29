@@ -477,28 +477,75 @@ function App() {
 
           {/* 封面款式說明 */}
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <div className="flex items-center mb-4">
-                  <Package className="w-8 h-8 text-amber-500 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
-                </div>
-                <div className="text-gray-600 space-y-2">
-                  <p className="text-lg">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
-                  <p className="text-sm">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
+            <div className="flex items-center mb-6">
+              <Package className="w-8 h-8 text-amber-500 mr-3" />
+              <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
+            </div>
+            
+            {/* 三張角色 Banner */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* 哈欠狗 */}
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/dog_page-0001.jpg" 
+                  alt="哈欠狗封面" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-4">
+                    <h4 className="text-lg font-medium mb-2">哈欠狗</h4>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      慵懶可愛的哈欠表情<br />
+                      療癒系角色設計
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-4 ml-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
-                  哈欠狗
-                </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
-                  厭世貓
-                </div>
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
-                  慵懶貓
+
+              {/* 厭世貓 */}
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/cat_page-0001.jpg" 
+                  alt="厭世貓封面" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-4">
+                    <h4 className="text-lg font-medium mb-2">厭世貓</h4>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      經典厭世表情<br />
+                      都市人的心聲代表
+                    </p>
+                  </div>
                 </div>
               </div>
+
+              {/* 慵懶貓 */}
+              <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/cat2_page-0001.jpg" 
+                  alt="慵懶貓封面" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-4">
+                    <h4 className="text-lg font-medium mb-2">慵懶貓</h4>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      放鬆慵懶的姿態<br />
+                      享受悠閒時光
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* 底部說明文字 */}
+            <div className="text-center text-gray-600 space-y-2">
+              <p className="text-lg">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
+              <p className="text-sm">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
             </div>
           </div>
         </div>
