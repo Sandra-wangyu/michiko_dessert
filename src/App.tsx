@@ -661,7 +661,7 @@ function App() {
                     <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
                     <div className="bg-gray-50 p-2 rounded-lg">
                       <img 
-                        src="/image.png" 
+                        src="/in_egg.jpg" 
                         alt="營養標示"
                         className="w-full h-auto"
                       />
@@ -700,7 +700,7 @@ function App() {
                     <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
                     <div className="bg-gray-50 p-2 rounded-lg">
                       <img 
-                        src="/image.png" 
+                        src="/in_02.jpg" 
                         alt="營養標示"
                         className="w-full h-auto"
                       />
@@ -714,7 +714,7 @@ function App() {
                 <div className="text-center mb-4">
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/S__40509453_0.jpg" 
+                      src="/S__40509583.jpg" 
                       alt="輕日子檸檬磅蛋糕"
                       className="w-full h-full object-cover"
                     />
@@ -739,7 +739,7 @@ function App() {
                     <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
                     <div className="bg-gray-50 p-2 rounded-lg">
                       <img 
-                        src="/image.png" 
+                        src="/in_03.jpg" 
                         alt="營養標示"
                         className="w-full h-auto"
                       />
