@@ -31,8 +31,8 @@ interface OrderData {
 const products: Product[] = [
   {
     id: 1,
-    name: "六入蛋黃酥組",
-    description: "內容物：6 顆蛋黃酥／綠豆椪，自由搭配（每種口味至少 2 顆起跳）\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
+    name: "六入綜合組",
+    description: "內容物：3顆蛋黃酥+3顆綠豆椪\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
     price: 390,
     image: "/S__40509450_0.jpg",
     category: "組合A"
@@ -40,13 +40,29 @@ const products: Product[] = [
   {
     id: 2,
     name: "六入磅蛋糕組",
-    description: "內容物：蛋黃酥／綠豆椪 任選 3 顆 ＋ 檸檬磅蛋糕 4 片\n✅ 中式 x 西點甜點混搭組合，送禮自享兩相宜\n✅ 嚴選嘉禾粉心粉 × 台灣19號奶油，口感更升級",
+    description: "內容物：蛋黃酥2+綠豆椪1 ＋ 檸檬磅蛋糕 4 片\n✅ 中式 x 西點甜點混搭組合，送禮自享兩相宜\n✅ 嚴選嘉禾粉心粉 × 台灣19號奶油，口感更升級",
     price: 399,
     image: "/S__40509453_0.jpg",
     category: "組合B"
   },
   {
     id: 3,
+    name: "六入蛋黃酥組",
+    description: "內容物：6 顆蛋黃酥\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
+    price: 390,
+    image: "/S__40509442.jpg",
+    category: "組合C"
+  },
+  {
+    id: 4,
+    name: "六入綠豆椪組",
+    description: "內容物：6 顆綠豆椪\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
+    price: 390,
+    image: "/S__40509452_0.jpg",
+    category: "組合D"
+  },
+  {
+    id: 5,
     name: "好日子蛋黃酥",
     description: "闆娘親手製作，真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
     price: 65,
@@ -57,7 +73,7 @@ const products: Product[] = [
     allergens: "本產品含有蛋類、奶類、芝麻、大豆、小麥、花生及其製品，不適合其過敏體質者食用。"
   },
   {
-    id: 4,
+    id: 6,
     name: "好日子綠豆椪",
     description: "綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g，不含豬油清爽口感",
     price: 60,
@@ -67,17 +83,6 @@ const products: Product[] = [
     ingredients: "綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水",
     allergens: "本產品含有奶類、小麥及其製品，不適合其過敏體質者食用。"
   },
-  {
-    id: 5,
-    name: "輕日子檸檬磅蛋糕",
-    description: "使用台灣19號無鹽發酵奶油，搭配新鮮檸檬汁，口感濕潤香甜",
-    price: 45,
-    image: "/S__40509455_0.jpg",
-    category: "單品",
-    weight: "35g",
-    ingredients: "台灣19號無鹽發酵奶油（乳脂、發酵菌種）、雞蛋、低筋麵粉、糖粉（砂糖、玉米澱粉）、細砂糖、檸檬汁、牛奶、鹽",
-    allergens: "本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。"
-  }
 ];
 
 function App() {
@@ -218,37 +223,45 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-amber-50">
+      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/image.png" 
+            alt="MICHIKO 甜點" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-light text-gray-800 mb-4 tracking-wide">
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-4 tracking-wide relative z-10">
               MICHIKO
             </h1>
-            <div className="w-24 h-0.5 bg-amber-400 mx-auto mb-6"></div>
-            <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+            <div className="w-24 h-0.5 bg-white mx-auto mb-6 relative z-10"></div>
+            <p className="text-xl md:text-2xl text-white font-light leading-relaxed max-w-2xl mx-auto relative z-10">
               用心製作每一份甜蜜<br />
               讓美好時光更加珍貴
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="flex items-center text-gray-600 text-sm">
-              <Award className="w-4 h-4 mr-2 text-amber-500" />
+          <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
+            <div className="flex items-center text-white text-sm">
+              <Award className="w-4 h-4 mr-2 text-white" />
               精選食材
             </div>
-            <div className="flex items-center text-gray-600 text-sm">
-              <Heart className="w-4 h-4 mr-2 text-amber-500" />
+            <div className="flex items-center text-white text-sm">
+              <Heart className="w-4 h-4 mr-2 text-white" />
               手工製作
             </div>
-            <div className="flex items-center text-gray-600 text-sm">
-              <Leaf className="w-4 h-4 mr-2 text-amber-500" />
+            <div className="flex items-center text-white text-sm">
+              <Leaf className="w-4 h-4 mr-2 text-white" />
               天然無添加
             </div>
           </div>
 
           <a
             href="#intro"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-block bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative z-10"
           >
             探索更多
           </a>
@@ -257,11 +270,11 @@ function App() {
 
       {/* Brand Story Section */}
       <section id="intro" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-gray-800 mb-4">關於michiko咪匠人好食</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
-            <div className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed space-y-4">
+            <div className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed space-y-3 font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
               <p>這個品牌，走過第六個年頭。<br />我是品牌師、行銷人，也是甜點師。</p>
               <p>因為愛吃，<br />也因為想讓家人吃得安心、吃得開心。<br />身在食品產業的我，選擇親手學、親手做。</p>
               <p>每一樣食材都看得懂，<br />每一口用心都吃得到。</p>
@@ -269,14 +282,14 @@ function App() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8">
               <div className="bg-gray-50 p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
                   <Heart className="w-6 h-6 text-amber-500 mr-3" />
                   <h3 className="text-xl font-medium text-gray-800">🍂 闆娘手作，讓點心也有溫度</h3>
                 </div>
-                <div className="text-gray-600 leading-relaxed space-y-2 text-sm">
+                <div className="text-gray-600 leading-relaxed space-y-2 text-sm font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
                   <p>✿ 每一顆都由闆娘親手製作，用心手包，只為你入口那一刻的幸福感</p>
                   <p>✿ 餅皮全程不含豬油，選用植物油與高品質奶油，口感清爽、不油膩（蛋奶素可食）</p>
                   <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎碎蛋或半顆唬弄版本！</p>
@@ -289,7 +302,7 @@ function App() {
               <div className="bg-gray-50 p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
                   <Leaf className="w-6 h-6 text-amber-500 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">嚴選食材</h3>
+                  <h3 className="text-lg font-medium text-gray-800">嚴選食材</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
                   <div>• 台灣19號發酵奶油</div>
@@ -304,7 +317,7 @@ function App() {
               <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
                 <div className="flex items-center mb-4">
                   <Package className="w-6 h-6 text-amber-600 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">保存方式</h3>
+                  <h3 className="text-lg font-medium text-gray-800">保存方式</h3>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   請置於陰涼乾燥處保存，開封後請盡快食用完畢。冷藏保存可延長保鮮期，食用前回溫口感更佳。
@@ -312,7 +325,7 @@ function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               <div className="space-y-4">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <img 
@@ -363,6 +376,24 @@ function App() {
 
           {/* 封面款式說明 */}
           <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Package className="w-8 h-8 text-amber-500 mr-3" />
+                <div>
+                  <h3 className="text-lg font-medium text-gray-800 mb-2">📦 封面款式說明</h3>
+                  <p className="text-gray-600">三款設計任選｜哈欠狗、厭世貓、慵懶貓（適用於所有組合，如未指定將隨機出貨）</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
+                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
+                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
+              </div>
+            </div>
+          </div>
+
+          {/* 封面款式說明 */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
             <div className="text-center">
               <Package className="w-8 h-8 text-amber-500 mx-auto mb-3" />
               <h3 className="text-lg font-medium text-gray-800 mb-2">📦 封面款式說明</h3>
@@ -379,6 +410,41 @@ function App() {
               />
             ))}
           </div>
+
+          {/* 購物車總覽 */}
+          {cart.length > 0 && (
+            <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="text-center">
+                <h3 className="text-2xl font-medium text-gray-800 mb-6">購物車總覽</h3>
+                <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                  {cart.map(item => (
+                    <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
+                      <span className="text-gray-700">{item.name} × {item.quantity}</span>
+                      <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
+                    </div>
+                  ))}
+                  <div className="flex justify-between items-center pt-4 text-lg font-medium text-gray-800">
+                    <span>總計 ({getTotalItems()} 件商品)</span>
+                    <span>NT$ {getTotalPrice()}</span>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button
+                    onClick={() => setIsCartOpen(true)}
+                    className="px-6 py-3 border border-amber-500 text-amber-600 rounded-full hover:bg-amber-50 transition-colors"
+                  >
+                    查看購物車詳情
+                  </button>
+                  <button
+                    onClick={() => setShowOrderForm(true)}
+                    className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors"
+                  >
+                    前往結帳
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* 成分與過敏原資訊區 */}
           <div className="mt-16">
@@ -417,41 +483,6 @@ function App() {
               ))}
             </div>
           </div>
-
-          {/* Checkout Summary */}
-          {cart.length > 0 && (
-            <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-              <div className="text-center">
-                <h3 className="text-2xl font-medium text-gray-800 mb-6">購物車總覽</h3>
-                <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                  {cart.map(item => (
-                    <div key={item.id} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                      <span className="text-gray-700">{item.name} × {item.quantity}</span>
-                      <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
-                    </div>
-                  ))}
-                  <div className="flex justify-between items-center pt-4 text-lg font-medium text-gray-800">
-                    <span>總計 ({getTotalItems()} 件商品)</span>
-                    <span>NT$ {getTotalPrice()}</span>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                    onClick={() => setIsCartOpen(true)}
-                    className="px-6 py-3 border border-amber-500 text-amber-600 rounded-full hover:bg-amber-50 transition-colors"
-                  >
-                    查看購物車詳情
-                  </button>
-                  <button
-                    onClick={() => setShowOrderForm(true)}
-                    className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors"
-                  >
-                    前往結帳
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
