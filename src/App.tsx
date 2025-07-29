@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Plus, Minus, X, Phone, MapPin, Clock, Package, Star, Heart, Award, Leaf } from 'lucide-react';
+import { ShoppingCart, Plus, Minus, X, Phone, MapPin, Clock, Package, Star, Heart, Award, Leaf, Facebook, Instagram } from 'lucide-react';
 
 interface Product {
   id: number;
@@ -774,6 +774,28 @@ function App() {
               <h3 className="text-lg font-medium text-gray-800 mb-2">營業時間</h3>
               <p className="text-gray-600">週一至週日<br />9:00 - 18:00</p>
             </div>
+          </div>
+          
+          {/* Social Media Links */}
+          <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
+            <a 
+              href="https://www.facebook.com/michiko咪匠人好食" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+            >
+              <Facebook className="w-6 h-6" />
+              <span className="text-sm">michiko咪匠人好食</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/michiko咪匠人好食" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition-colors duration-200"
+            >
+              <Instagram className="w-6 h-6" />
+              <span className="text-sm">michiko咪匠人好食</span>
+            </a>
           </div>
         </div>
       </section>
