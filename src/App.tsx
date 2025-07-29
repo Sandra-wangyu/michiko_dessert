@@ -160,15 +160,29 @@ function App() {
       total: subtotal + shippingFee
     };
 
-    console.log('訂單資料:', completeOrderData);
-    
-    // 這裡可以整合實際的訂單處理 API
-    alert(`訂單已成功送出！\n訂單編號：${completeOrderData.orderNumber}\n我們會盡快與您聯繫確認訂單詳情。`);
-    
-    // 重置狀態
-    setCart([]);
-    setShowOrderForm(false);
-    setIsCartOpen(false);
+    try {
+      // 發送訂單資料到 Google Sheet
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmeB_FKEZ_NM44jwIWHinvvRs5cK2VqlCj1AGT2wrfzDXEhG3uYEdcDE_X_w6P3GgmFw/exec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(completeOrderData),
+        mode: 'no-cors' // Google Apps Script 需要此設定
+      });
+
+      // 由於 no-cors 模式，我們無法檢查回應狀態，但可以假設成功
+      alert(`✅ 訂單已成功送出！\n\n📋 訂單編號：${completeOrderData.orderNumber}\n📞 我們會盡快與您聯繫確認訂單詳情。\n\n感謝您選擇 michiko 手作甜點！`);
+      
+      // 重置狀態
+      setCart([]);
+      setShowOrderForm(false);
+      setIsCartOpen(false);
+      
+    } catch (error) {
+      console.error('訂單提交錯誤:', error);
+      alert('❌ 訂單提交失敗，請稍後再試或直接聯繫我們。\n\n📞 聯繫電話：0912-345-678');
+    }
   };
 
   useEffect(() => {
