@@ -223,68 +223,81 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/image.png" 
-            alt="MICHIKO 甜點" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-        </div>
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-light text-white mb-4 tracking-wide relative z-10">
-              MICHIKO
-            </h1>
-            <div className="w-24 h-0.5 bg-white mx-auto mb-6 relative z-10"></div>
-            <p className="text-xl md:text-2xl text-white font-light leading-relaxed max-w-2xl mx-auto relative z-10">
-              用心製作每一份甜蜜<br />
-              讓美好時光更加珍貴
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-12 relative z-10">
-            <div className="flex items-center text-white text-sm">
-              <Award className="w-4 h-4 mr-2 text-white" />
-              精選食材
-            </div>
-            <div className="flex items-center text-white text-sm">
-              <Heart className="w-4 h-4 mr-2 text-white" />
-              手工製作
-            </div>
-            <div className="flex items-center text-white text-sm">
-              <Leaf className="w-4 h-4 mr-2 text-white" />
-              天然無添加
-            </div>
-          </div>
+      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* 左側內容 */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl md:text-7xl font-light text-gray-800 mb-4 tracking-wide">
+                MICHIKO
+              </h1>
+              <div className="w-24 h-0.5 bg-amber-400 mx-auto lg:mx-0 mb-6"></div>
+              <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+                用心製作每一份甜蜜<br />
+                讓美好時光更加珍貴
+              </p>
+              
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+                <div className="flex items-center text-gray-600 text-sm">
+                  <Award className="w-4 h-4 mr-2 text-amber-500" />
+                  精選食材
+                </div>
+                <div className="flex items-center text-gray-600 text-sm">
+                  <Heart className="w-4 h-4 mr-2 text-amber-500" />
+                  手工製作
+                </div>
+                <div className="flex items-center text-gray-600 text-sm">
+                  <Leaf className="w-4 h-4 mr-2 text-amber-500" />
+                  天然無添加
+                </div>
+              </div>
 
-          <a
-            href="#intro"
-            className="inline-block bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl relative z-10"
-          >
-            探索更多
-          </a>
+              <a
+                href="#intro"
+                className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                探索更多
+              </a>
+            </div>
+            
+            {/* 右側圖片 */}
+            <div className="relative">
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/image.png" 
+                  alt="MICHIKO 甜點" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              {/* 裝飾性漸層圓圈 */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-amber-200 to-amber-400 rounded-full opacity-20 -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full opacity-30 -z-10"></div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Brand Story Section */}
-      <section id="intro" className="py-20 bg-white">
+      <section id="intro" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-gray-800 mb-4">關於michiko咪匠人好食</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
-            <div className="text-base text-gray-600 max-w-4xl mx-auto leading-relaxed space-y-3 font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
-              <p>這個品牌，走過第六個年頭。<br />我是品牌師、行銷人，也是甜點師。</p>
-              <p>因為愛吃，<br />也因為想讓家人吃得安心、吃得開心。<br />身在食品產業的我，選擇親手學、親手做。</p>
-              <p>每一樣食材都看得懂，<br />每一口用心都吃得到。</p>
-              <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與生活的用心。</p>
+            <div className="text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed space-y-2 font-light grid md:grid-cols-2 gap-6 text-left" style={{fontFamily: "'Noto Sans TC', cursive"}}>
+              <div className="space-y-3">
+                <p>這個品牌，走過第六個年頭。<br />我是品牌師、行銷人，也是甜點師。</p>
+                <p>因為愛吃，<br />也因為想讓家人吃得安心、吃得開心。<br />身在食品產業的我，選擇親手學、親手做。</p>
+              </div>
+              <div className="space-y-3">
+                <p>每一樣食材都看得懂，<br />每一口用心都吃得到。</p>
+                <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與生活的用心。</p>
+              </div>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-8">
-              <div className="bg-gray-50 p-6 rounded-2xl">
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-4">
                   <Heart className="w-6 h-6 text-amber-500 mr-3" />
                   <h3 className="text-xl font-medium text-gray-800">🍂 闆娘手作，讓點心也有溫度</h3>
@@ -299,7 +312,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-2xl">
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-4">
                   <Leaf className="w-6 h-6 text-amber-500 mr-3" />
                   <h3 className="text-lg font-medium text-gray-800">嚴選食材</h3>
@@ -327,14 +340,14 @@ function App() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-4">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
                   <img 
                     src="/S__40509450_0.jpg" 
                     alt="精緻甜點" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
                   <img 
                     src="/S__40509453_0.jpg" 
                     alt="手工製作" 
@@ -343,14 +356,14 @@ function App() {
                 </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
                   <img 
                     src="/S__40509455_0.jpg" 
                     alt="精美包裝" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
                   <img 
                     src="/S__40509452_0.jpg" 
                     alt="新鮮食材" 
@@ -364,7 +377,7 @@ function App() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-gray-50">
+      <section id="products" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-gray-800 mb-4">商品選購</h2>
@@ -385,19 +398,10 @@ function App() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
-                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
-                <div className="w-16 h-16 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">圖片</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">哈欠狗</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">厭世貓</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">慵懶貓</div>
               </div>
-            </div>
-          </div>
-
-          {/* 封面款式說明 */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
-            <div className="text-center">
-              <Package className="w-8 h-8 text-amber-500 mx-auto mb-3" />
-              <h3 className="text-lg font-medium text-gray-800 mb-2">📦 封面款式說明</h3>
-              <p className="text-gray-600">三款設計任選｜哈欠狗、厭世貓、慵懶貓（適用於所有組合，如未指定將隨機出貨）</p>
             </div>
           </div>
 
@@ -457,11 +461,13 @@ function App() {
               {products.filter(product => product.weight).map(product => (
                 <div key={`info-${product.id}`} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                   <div className="text-center mb-4">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-20 h-20 object-cover rounded-full mx-auto mb-3"
-                    />
+                    <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h4 className="text-lg font-medium text-gray-800">{product.name}</h4>
                   </div>
                   
@@ -487,7 +493,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
           <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-12"></div>
@@ -543,7 +549,7 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
 
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-      <div className="aspect-square overflow-hidden">
+      <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
         <img
           src={product.image}
           alt={product.name}
@@ -627,7 +633,9 @@ function CartSidebar({
             <div className="space-y-4">
               {cart.map(item => (
                 <div key={item.id} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-                  <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-lg" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-800">{item.name}</h3>
                     <p className="text-amber-600">NT$ {item.price}</p>
