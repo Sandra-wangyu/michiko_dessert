@@ -535,10 +535,11 @@ function App() {
             </div>
             
             {/* 底部說明文字 */}
-            <div className="text-center text-gray-600 space-y-1 mt-4">
+            <div className="text-center text-gray-600 space-y-1 mt-6">
               <p className="text-base">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
               <p className="text-xs">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
             </div>
+          </div>
           </div>
       </section>
 
