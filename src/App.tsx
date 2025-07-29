@@ -1082,21 +1082,16 @@ function OrderFormModal({
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-6">
-          {/* 訂購人資訊 */}
-          <div className="bg-gray-50 p-6 rounded-xl">
-            <h3 className="text-lg font-medium text-gray-800 mb-4">訂購人資訊</h3>
-            <div className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    訂購人姓名 *
-                  </label>
-                  <input
-                    type="text"
                     required
-                    value={formData.customerName}
-                    onChange={(e) => setFormData({...formData, customerName: e.target.value})}
+        <div className="col-span-full border-t pt-6 mt-6 space-y-4">
+          {/* 面交地點與社群媒體同排 */}
+          <div className="flex justify-center items-center space-x-8 flex-wrap gap-4">
+            {/* 面交地點 */}
+            <div className="flex items-center text-gray-600 hover:text-pink-500 transition-colors">
+              <MapPin className="w-6 h-6 mr-2" />
+              <span className="text-sm">台北市信義區市府路1號</span>
+            </div>
+            
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                   />
                 </div>
