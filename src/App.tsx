@@ -150,10 +150,18 @@ function App() {
     const subtotal = getTotalPrice();
     const shippingFee = orderData.deliveryMethod === '宅配' && subtotal < 2000 ? 180 : 0;
     
+    // 生成新格式的訂單編號：mich + 日期 + 序號
+    const today = new Date();
+    const dateStr = today.getFullYear().toString() + 
+                   (today.getMonth() + 1).toString().padStart(2, '0') + 
+                   today.getDate().toString().padStart(2, '0');
+    const timeStamp = Date.now().toString().slice(-3); // 使用時間戳後3位作為序號
+    const orderNumber = `mich${dateStr}${timeStamp}`;
+    
     const completeOrderData = {
       ...orderData,
       timestamp: new Date().toLocaleString('zh-TW'),
-      orderNumber: 'MICH' + Date.now(),
+      orderNumber: orderNumber,
       items: cart,
       subtotal,
       shippingFee,
@@ -161,7 +169,8 @@ function App() {
     };
 
     try {
-      // 發送訂單資料到 Google Sheet
+      console.log('提交訂單資料:', completeOrderData); // 除錯用
+      
       const response = await fetch('https://script.google.com/macros/s/AKfycbzmeB_FKEZ_NM44jwIWHinvvRs5cK2VqlCj1AGT2wrfzDXEhG3uYEdcDE_X_w6P3GgmFw/exec', {
         method: 'POST',
         headers: {
@@ -171,8 +180,10 @@ function App() {
         mode: 'no-cors' // Google Apps Script 需要此設定
       });
 
-      // 由於 no-cors 模式，我們無法檢查回應狀態，但可以假設成功
-      alert(`✅ 訂單已成功送出！\n\n📋 訂單編號：${completeOrderData.orderNumber}\n📞 我們會盡快與您聯繫確認訂單詳情。\n\n感謝您選擇 michiko 手作甜點！`);
+      // 延遲一下確保資料傳送完成
+      setTimeout(() => {
+        alert(`✅ 訂單已成功送出！\n\n📋 訂單編號：${orderNumber}\n📞 我們會盡快與您聯繫確認訂單詳情。\n\n感謝您選擇 michiko 手作甜點！`);
+      }, 500);
       
       // 重置狀態
       setCart([]);
