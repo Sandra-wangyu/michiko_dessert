@@ -420,6 +420,47 @@ function App() {
             <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
           </div>
           
+          {/* Banner Images */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* First Banner */}
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/LINE_ALBUM_Michiko_250729_11.jpg" 
+                alt="精美禮盒設計" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white px-6">
+                  <h3 className="text-xl font-medium mb-2">精緻包裝設計</h3>
+                  <p className="text-sm leading-relaxed opacity-90">
+                    無膠角釘禮盒，100% 再生牛奶盒紙板<br />
+                    環保材質，溫柔設計
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Banner */}
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/LINE_ALBUM_Michiko_250729_12.jpg" 
+                alt="無墨壓印工藝" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white px-6">
+                  <h3 className="text-xl font-medium mb-2">無墨壓印工藝</h3>
+                  <p className="text-sm leading-relaxed opacity-90">
+                    LOGO 採用無墨壓印，不上色、不燙金<br />
+                    值得被留下來的溫柔設計
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
             <div className="text-gray-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto" style={{fontFamily: "'Noto Sans TC', cursive"}}>
               <p className="text-lg">
