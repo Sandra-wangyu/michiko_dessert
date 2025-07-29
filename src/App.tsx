@@ -35,9 +35,9 @@ const products: Product[] = [
   {
     id: 1,
     name: "六入好日組",
-    description: "請選擇您喜愛的組合搭配",
+    description: "酥到掉渣的綜合選擇，都給你好日子",
     price: 390,
-    image: "/S__40509450_0.jpg",
+    image: "/gif_05.jpg",
     category: "組合A",
     type: "combo",
     options: ["蛋黃酥 3 + 綠豆椪 3", "蛋黃酥 6", "綠豆椪 6"],
@@ -46,9 +46,9 @@ const products: Product[] = [
   {
     id: 2,
     name: "六入磅蛋糕組",
-    description: "中式 x 西點甜點混搭組合，送禮自享兩相宜",
+    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕",
     price: 399,
-    image: "/S__40509453_0.jpg",
+    image: "/6gif.jpg",
     category: "組合B",
     type: "combo",
     options: ["蛋黃酥 3 + 檸檬磅蛋糕 4 片", "綠豆椪 3 + 檸檬磅蛋糕 4 片"],
@@ -56,8 +56,8 @@ const products: Product[] = [
   },
   {
     id: 3,
-    name: "好日子蛋黃酥",
-    description: "闆娘親手製作，真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
+    name: "好日子蛋黃酥(無禮盒)",
+    description: "(單入裝，無禮盒) 真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
     price: 65,
     image: "/egg_single.jpg",
     category: "單品",
@@ -65,8 +65,8 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: "好日子綠豆椪",
-    description: "綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g，不含豬油清爽口感",
+    name: "好日子綠豆椪(無禮盒)",
+    description: "(單入裝，無禮盒) 綿密細緻綠豆餡，內餡重達40g，不含豬油清爽口感",
     price: 60,
     image: "/single.jpg",
     category: "單品",
@@ -183,7 +183,7 @@ function App() {
 
       // 延遲一下確保資料傳送完成
       setTimeout(() => {
-        alert(`✅ 訂單已成功送出！\n\n📋 訂單編號：${orderNumber}\n📞 我們會盡快與您聯繫確認訂單詳情。\n\n感謝您選擇 michiko 手作甜點！`);
+        alert(`✅ 訂單已成功送出！\n\n📋 🎀 我們已寄送MAIL給您確認訂購明細及匯款資訊，若於一天內未收到MAIL，請您私訊IG：michiko_dessert，會盡快與您聯繫。\n\n感謝您選擇 michiko 手作甜點！`);
       }, 500);
       
       // 重置狀態
@@ -193,7 +193,7 @@ function App() {
       
     } catch (error) {
       console.error('訂單提交錯誤:', error);
-      alert('❌ 訂單提交失敗，請稍後再試或直接聯繫我們。\n\n📞 聯繫電話：0912-345-678');
+      alert('❌ 訂單提交失敗，請稍後再試或直接聯繫我們。\n\n🎀 私訊IG：michiko_dessert');
     }
   };
 
@@ -325,7 +325,7 @@ function App() {
                 <p>因為愛吃，<br />也因為想讓家人吃得安心、吃得開心。<br />身在食品產業的我，選擇親手學、親手做。</p>
               </div>
               <div className="space-y-3">
-                <p>每一樣食材都看得懂，<br />每一口用心都吃得到。</p>
+                <p><string>每一樣食材都看得懂，<br />每一口用心都吃得到。</string></p>
                 <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與生活的用心。</p>
               </div>
             </div>
@@ -340,10 +340,11 @@ function App() {
                 </div>
                 <div className="text-gray-600 leading-relaxed space-y-2 text-sm font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
                   <p>✿ 每一顆都由闆娘親手製作，用心手包，酥到掉渣</p>
-                  <p>✿ 不含豬油，選用植物油與台灣LV奶油，口感清爽不油膩（蛋奶素）</p>
+                  <p>✿ 不含豬油，選用植物油與台灣LV奶油，口感清爽不油膩</p>
                   <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎碎蛋或半顆唬弄版本！</p>
                   <p>✿ 不吃鹹蛋？也可選擇綿密細緻的綠豆餡，內餡重達40g</p>
                   <p>✿ 全品項皆使用台灣之光「19號奶油」，在地生產，媲美歐洲頂級奶油</p>
+                  <p>✿ 蛋奶素也可食，獨家工法卻仍能保有層次酥度</p>
                   <p className="font-medium text-amber-600">✨ 此次酥皮全面升級，真的好～酥！</p>
                 </div>
               </div>
@@ -385,7 +386,7 @@ function App() {
                 </div>
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
                   <img 
-                    src="/S__40509453_0.jpg" 
+                    src="/gif_03.jpg" 
                     alt="手工製作" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -399,9 +400,25 @@ function App() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
+                <div className="space-y-4 pt-8">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+                  <img 
+                    src="/gif_06.jpg" 
+                    alt="精美包裝" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="space-y-4 pt-8">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+                  <img 
+                    src="/S__40509583.jpg" 
+                    alt="精美包裝" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
                   <img 
-                    src="/S__40509452_0.jpg" 
+                    src="/gif_02.jpg" 
                     alt="新鮮食材" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
