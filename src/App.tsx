@@ -757,38 +757,22 @@ function App() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
           <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-12"></div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-blue-600 rounded mx-auto mb-4 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">f</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Facebook</h3>
-              <a 
-                href="https://www.facebook.com/michiko咪匠人好食" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-colors"
-              >
-                michiko咪匠人好食
-              </a>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center p-6">
+              <Phone className="w-8 h-8 text-amber-500 mb-4" />
+              <h3 className="text-lg font-medium text-gray-800 mb-2">電話訂購</h3>
               <p className="text-gray-600">0912-345-678</p>
             </div>
             <div className="flex flex-col items-center p-6">
               <MapPin className="w-8 h-8 text-amber-500 mb-4" />
               <h3 className="text-lg font-medium text-gray-800 mb-2">面交地點</h3>
               <p className="text-gray-600">台南市中西區</p>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded mx-auto mb-4 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">📷</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Instagram</h3>
-              <a 
-                href="https://www.instagram.com/michiko咪匠人好食" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-purple-600 hover:text-purple-800 transition-colors"
-              >
-                michiko咪匠人好食
-              </a>
+            </div>
+            <div className="flex flex-col items-center p-6">
+              <Clock className="w-8 h-8 text-amber-500 mb-4" />
+              <h3 className="text-lg font-medium text-gray-800 mb-2">營業時間</h3>
+              <p className="text-gray-600">週一至週日<br />9:00 - 18:00</p>
             </div>
           </div>
         </div>
