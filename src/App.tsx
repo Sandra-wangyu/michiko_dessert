@@ -369,6 +369,57 @@ function App() {
         </div>
       </section>
 
+      {/* Gift Box Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-gray-800 mb-4">🎁 關於這次的禮盒</h2>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
+            <div className="text-gray-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto" style={{fontFamily: "'Noto Sans TC', cursive"}}>
+              <p className="text-lg">
+                這次特別訂製了無膠角釘禮盒，沒有使用膠水與雙面膠，<br />
+                從外盒到內襯，皆選用100% 再生牛奶盒紙板。
+              </p>
+              <p className="text-lg">
+                LOGO 採用無墨壓印工藝，不上色、不燙金，<br />
+                我們希望這份禮盒，不只是中秋後的垃圾，<br />
+                而是能被留下來的溫柔設計。
+              </p>
+            </div>
+          </div>
+
+          {/* 封面款式說明 */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <div className="flex items-center mb-4">
+                  <Package className="w-8 h-8 text-amber-500 mr-3" />
+                  <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
+                </div>
+                <div className="text-gray-600 space-y-2">
+                  <p className="text-lg">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
+                  <p className="text-sm">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
+                </div>
+              </div>
+              <div className="flex gap-4 ml-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
+                  哈欠狗
+                </div>
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
+                  厭世貓
+                </div>
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs text-center leading-tight">
+                  慵懶貓
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
       <section id="products" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,24 +429,6 @@ function App() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               每一款甜點都是闆娘的用心之作，選用最優質的食材，呈現最完美的味覺體驗
             </p>
-          </div>
-
-          {/* 封面款式說明 */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <Package className="w-8 h-8 text-amber-500 mr-3" />
-                <div>
-                  <h3 className="text-lg font-medium text-gray-800 mb-2">📦 封面款式說明</h3>
-                  <p className="text-gray-600">三款設計任選｜哈欠狗、厭世貓、慵懶貓（適用於所有組合，如未指定將隨機出貨）</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">哈欠狗</div>
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">厭世貓</div>
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 text-xs">慵懶貓</div>
-              </div>
-            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
