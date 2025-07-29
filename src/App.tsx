@@ -1127,6 +1127,7 @@ function OrderFormModal({
             </div>
           </div>
 
+          <div>
           {/* 訂購品項 */}
           <div className="bg-gray-50 p-6 rounded-xl">
             <h3 className="text-lg font-medium text-gray-800 mb-4">訂購品項</h3>
@@ -1136,6 +1137,7 @@ function OrderFormModal({
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="text-gray-800 font-medium">{item.name} × {item.quantity}</div>
+          </div>
                       {item.selectedOption && (
                         <div className="text-sm text-gray-600 mt-1">內容：{item.selectedOption}</div>
                       )}
