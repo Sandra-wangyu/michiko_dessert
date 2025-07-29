@@ -8,6 +8,9 @@ interface Product {
   price: number;
   image: string;
   category: string;
+  weight?: string;
+  ingredients?: string;
+  allergens?: string;
 }
 
 interface CartItem extends Product {
@@ -28,43 +31,52 @@ interface OrderData {
 const products: Product[] = [
   {
     id: 1,
-    name: "經典檸檬塔",
-    description: "酸甜平衡的檸檬塔，採用新鮮檸檬汁與法國奶油製作，口感清香不膩，每一口都是夏日的清新",
-    price: 380,
+    name: "六入蛋黃酥組",
+    description: "內容物：6 顆蛋黃酥／綠豆椪，自由搭配（每種口味至少 2 顆起跳）\n✅ 傳統與創新一次擁有，酥香濃郁、入口即化！",
+    price: 390,
     image: "/S__40509450_0.jpg",
-    category: "塔類"
+    category: "組合A"
   },
   {
     id: 2,
-    name: "巧克力慕斯蛋糕",
-    description: "濃郁絲滑的比利時巧克力慕斯，層次豐富，甜而不膩，搭配酥脆餅乾底，完美平衡",
-    price: 420,
+    name: "六入磅蛋糕組",
+    description: "內容物：蛋黃酥／綠豆椪 任選 3 顆 ＋ 檸檬磅蛋糕 4 片\n✅ 中式 x 西點甜點混搭組合，送禮自享兩相宜\n✅ 嚴選嘉禾粉心粉 × 台灣19號奶油，口感更升級",
+    price: 399,
     image: "/S__40509453_0.jpg",
-    category: "蛋糕"
+    category: "組合B"
   },
   {
     id: 3,
-    name: "草莓奶昔蛋糕",
-    description: "新鮮草莓搭配輕盈奶昔，粉嫩色彩令人心動，每一層都充滿驚喜",
-    price: 450,
-    image: "/S__40509455_0.jpg",
-    category: "蛋糕"
+    name: "好日子蛋黃酥",
+    description: "闆娘親手製作，真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
+    price: 65,
+    image: "/S__40509442.jpg",
+    category: "單品",
+    weight: "75g",
+    ingredients: "烏豆沙餡〔圓雲豆、蔗糖、麥芽糖、台灣19號奶油、大豆油、甜味劑(赤藻醣醇)、海藻糖、麥芽糊精、玫瑰鹽、黏稠劑(玉米糖膠)〕、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、鹹蛋黃（含花生油）、砂糖、水、蛋黃、黑芝麻",
+    allergens: "本產品含有蛋類、奶類、芝麻、大豆、小麥、花生及其製品，不適合其過敏體質者食用。"
   },
   {
     id: 4,
-    name: "抹茶紅豆卷",
-    description: "日式抹茶與蜜紅豆的完美結合，傳統風味現代呈現，茶香悠長",
-    price: 360,
+    name: "好日子綠豆椪",
+    description: "綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g，不含豬油清爽口感",
+    price: 60,
     image: "/S__40509452_0.jpg",
-    category: "卷類"
+    category: "單品",
+    weight: "70g",
+    ingredients: "綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水",
+    allergens: "本產品含有奶類、小麥及其製品，不適合其過敏體質者食用。"
   },
   {
     id: 5,
-    name: "焦糖布丁塔",
-    description: "香濃焦糖與絲滑布丁的經典組合，酥脆塔皮與柔嫩內餡形成完美對比",
-    price: 390,
-    image: "/S__40509442.jpg",
-    category: "塔類"
+    name: "輕日子檸檬磅蛋糕",
+    description: "使用台灣19號無鹽發酵奶油，搭配新鮮檸檬汁，口感濕潤香甜",
+    price: 45,
+    image: "/S__40509455_0.jpg",
+    category: "單品",
+    weight: "35g",
+    ingredients: "台灣19號無鹽發酵奶油（乳脂、發酵菌種）、雞蛋、低筋麵粉、糖粉（砂糖、玉米澱粉）、細砂糖、檸檬汁、牛奶、鹽",
+    allergens: "本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。"
   }
 ];
 
@@ -247,38 +259,45 @@ function App() {
       <section id="intro" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-gray-800 mb-4">品牌故事</h2>
+            <h2 className="text-4xl font-light text-gray-800 mb-4">關於michiko咪匠人好食</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              MICHIKO 始於對甜點的純粹熱愛，每一份作品都承載著我們對完美的追求。
-              從選材到製作，每個細節都經過精心雕琢，只為呈現最純真的美味。
-            </p>
+            <div className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed space-y-4">
+              <p>這個品牌，走過第六個年頭。<br />我是品牌師、行銷人，也是甜點師。</p>
+              <p>因為愛吃，<br />也因為想讓家人吃得安心、吃得開心。<br />身在食品產業的我，選擇親手學、親手做。</p>
+              <p>每一樣食材都看得懂，<br />每一口用心都吃得到。</p>
+              <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與生活的用心。</p>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="bg-gray-50 p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
-                  <Star className="w-6 h-6 text-amber-500 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">產品特色</h3>
+                  <Heart className="w-6 h-6 text-amber-500 mr-3" />
+                  <h3 className="text-xl font-medium text-gray-800">🍂 闆娘手作，讓點心也有溫度</h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
-                  採用嚴選優質食材，每一份甜點都是手工精心製作。我們堅持不添加人工防腐劑，讓您品嚐到最純真的美味。
-                </p>
+                <div className="text-gray-600 leading-relaxed space-y-2 text-sm">
+                  <p>✿ 每一顆都由闆娘親手製作，用心手包，只為你入口那一刻的幸福感</p>
+                  <p>✿ 餅皮全程不含豬油，選用植物油與高品質奶油，口感清爽、不油膩（蛋奶素可食）</p>
+                  <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎碎蛋或半顆唬弄版本！</p>
+                  <p>✿ 不吃鹹蛋？也可選擇綿密細緻綠豆餡，餡料單純紮實，內餡重達 40g</p>
+                  <p>✿ 全品項皆使用台灣之光「19號發酵奶油」，乳香濃郁，媲美歐洲頂級奶油</p>
+                  <p className="font-medium text-amber-600">✨ 此次酥皮全面升級，真的好～酥！</p>
+                </div>
               </div>
 
               <div className="bg-gray-50 p-6 rounded-2xl">
                 <div className="flex items-center mb-4">
                   <Leaf className="w-6 h-6 text-amber-500 mr-3" />
-                  <h3 className="text-xl font-medium text-gray-800">主要成分</h3>
+                  <h3 className="text-xl font-medium text-gray-800">嚴選食材</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
-                  <div>• 法國進口奶油</div>
-                  <div>• 比利時巧克力</div>
-                  <div>• 新鮮雞蛋</div>
-                  <div>• 日本麵粉</div>
-                  <div>• 天然香草精</div>
-                  <div>• 有機糖粉</div>
+                  <div>• 台灣19號發酵奶油</div>
+                  <div>• 嘉禾粉心粉</div>
+                  <div>• 新鮮鹹蛋黃</div>
+                  <div>• 綠豆沙餡</div>
+                  <div>• 新鮮檸檬汁</div>
+                  <div>• 玄米油</div>
                 </div>
               </div>
 
@@ -288,7 +307,7 @@ function App() {
                   <h3 className="text-xl font-medium text-gray-800">保存方式</h3>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  請冷藏保存（2-8°C），開封後請於3天內食用完畢。食用前30分鐘取出回溫，口感更佳。
+                  請置於陰涼乾燥處保存，開封後請盡快食用完畢。冷藏保存可延長保鮮期，食用前回溫口感更佳。
                 </p>
               </div>
             </div>
@@ -335,11 +354,20 @@ function App() {
       <section id="products" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-gray-800 mb-4">精選甜點</h2>
+            <h2 className="text-4xl font-light text-gray-800 mb-4">商品選購</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              每一款甜點都是我們的用心之作，選用最優質的食材，呈現最完美的味覺體驗
+              每一款甜點都是闆娘的用心之作，選用最優質的食材，呈現最完美的味覺體驗
             </p>
+          </div>
+
+          {/* 封面款式說明 */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
+            <div className="text-center">
+              <Package className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+              <h3 className="text-lg font-medium text-gray-800 mb-2">📦 封面款式說明</h3>
+              <p className="text-gray-600">三款設計任選｜哈欠狗、厭世貓、慵懶貓（適用於所有組合，如未指定將隨機出貨）</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -350,6 +378,44 @@ function App() {
                 onAddToCart={addToCart}
               />
             ))}
+          </div>
+
+          {/* 成分與過敏原資訊區 */}
+          <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-light text-gray-800 mb-4">成分與過敏原資訊</h3>
+              <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {products.filter(product => product.weight).map(product => (
+                <div key={`info-${product.id}`} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                  <div className="text-center mb-4">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-20 h-20 object-cover rounded-full mx-auto mb-3"
+                    />
+                    <h4 className="text-lg font-medium text-gray-800">{product.name}</h4>
+                  </div>
+                  
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium text-gray-700">淨重：</span>
+                      <span className="text-gray-600">{product.weight}</span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-700">成分：</span>
+                      <p className="text-gray-600 leading-relaxed mt-1">{product.ingredients}</p>
+                    </div>
+                    <div className="bg-red-50 p-3 rounded-lg">
+                      <span className="font-medium text-red-700">過敏原：</span>
+                      <p className="text-red-600 text-xs leading-relaxed mt-1">{product.allergens}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Checkout Summary */}
@@ -460,7 +526,7 @@ function ProductCard({ product, onAddToCart }: { product: Product; onAddToCart: 
           </span>
         </div>
         <h3 className="text-xl font-medium text-gray-800 mb-2">{product.name}</h3>
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">{product.description}</p>
+        <div className="text-gray-600 text-sm leading-relaxed mb-4 whitespace-pre-line">{product.description}</div>
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-medium text-amber-600">NT$ {product.price}</span>
           <div className="flex items-center space-x-2">
