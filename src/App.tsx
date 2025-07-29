@@ -223,56 +223,49 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/image.png)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* 左側內容 */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-7xl font-light text-gray-800 mb-4 tracking-wide">
-                MICHIKO
-              </h1>
-              <div className="w-24 h-0.5 bg-amber-400 mx-auto lg:mx-0 mb-6"></div>
-              <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-                用心製作每一份甜蜜<br />
-                讓美好時光更加珍貴
-              </p>
-              
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-                <div className="flex items-center text-gray-600 text-sm">
-                  <Award className="w-4 h-4 mr-2 text-amber-500" />
-                  精選食材
-                </div>
-                <div className="flex items-center text-gray-600 text-sm">
-                  <Heart className="w-4 h-4 mr-2 text-amber-500" />
-                  手工製作
-                </div>
-                <div className="flex items-center text-gray-600 text-sm">
-                  <Leaf className="w-4 h-4 mr-2 text-amber-500" />
-                  天然無添加
-                </div>
-              </div>
-
-              <a
-                href="#intro"
-                className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                探索更多
-              </a>
-            </div>
+          <div className="text-center relative z-10">
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-4 tracking-wide">
+              MICHIKO
+            </h1>
+            <div className="w-24 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-xl md:text-2xl text-white font-light leading-relaxed max-w-2xl mx-auto mb-8">
+              用心製作每一份甜蜜<br />
+              讓美好時光更加珍貴
+            </p>
             
-            {/* 右側圖片 */}
-            <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/image.png" 
-                  alt="MICHIKO 甜點" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="flex items-center text-white text-sm">
+                <Award className="w-4 h-4 mr-2 text-amber-500" />
+                精選食材
               </div>
-              {/* 裝飾性漸層圓圈 */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-amber-200 to-amber-400 rounded-full opacity-20 -z-10"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full opacity-30 -z-10"></div>
+              <div className="flex items-center text-white text-sm">
+                <Heart className="w-4 h-4 mr-2 text-amber-500" />
+                手工製作
+              </div>
+              <div className="flex items-center text-white text-sm">
+                <Leaf className="w-4 h-4 mr-2 text-amber-500" />
+                天然無添加
+              </div>
             </div>
+
+            <a
+              href="#intro"
+              className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              探索更多
+            </a>
           </div>
         </div>
       </section>
@@ -458,35 +451,92 @@ function App() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.filter(product => product.weight).map(product => (
-                <div key={`info-${product.id}`} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                  <div className="text-center mb-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h4 className="text-lg font-medium text-gray-800">{product.name}</h4>
+              {/* 好日子蛋黃酥 */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <div className="text-center mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/S__40509442.jpg" 
+                      alt="好日子蛋黃酥"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-medium text-gray-700">淨重：</span>
-                      <span className="text-gray-600">{product.weight}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-700">成分：</span>
-                      <p className="text-gray-600 leading-relaxed mt-1">{product.ingredients}</p>
-                    </div>
-                    <div className="bg-red-50 p-3 rounded-lg">
-                      <span className="font-medium text-red-700">過敏原：</span>
-                      <p className="text-red-600 text-xs leading-relaxed mt-1">{product.allergens}</p>
-                    </div>
+                  <h4 className="text-lg font-medium text-gray-800">好日子蛋黃酥</h4>
+                </div>
+                
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="font-medium text-gray-700">淨重：</span>
+                    <span className="text-gray-600">75g</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">成分：</span>
+                    <p className="text-gray-600 leading-relaxed mt-1">烏豆沙餡〔圓雲豆、蔗糖、麥芽糖、台灣19號奶油、大豆油、甜味劑(赤藻醣醇)、海藻糖、麥芽糊精、玫瑰鹽、黏稠劑(玉米糖膠)〕、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、鹹蛋黃（含花生油）、砂糖、水、蛋黃、黑芝麻</p>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded-lg">
+                    <span className="font-medium text-red-700">過敏原：</span>
+                    <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、芝麻、大豆、小麥、花生及其製品，不適合其過敏體質者食用。</p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* 好日子綠豆椪 */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <div className="text-center mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/S__40509452_0.jpg" 
+                      alt="好日子綠豆椪"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-800">好日子綠豆椪</h4>
+                </div>
+                
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="font-medium text-gray-700">淨重：</span>
+                    <span className="text-gray-600">70g</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">成分：</span>
+                    <p className="text-gray-600 leading-relaxed mt-1">綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水</p>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded-lg">
+                    <span className="font-medium text-red-700">過敏原：</span>
+                    <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有奶類、小麥及其製品，不適合其過敏體質者食用。</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 輕日子檸檬磅蛋糕 */}
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <div className="text-center mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/S__40509453_0.jpg" 
+                      alt="輕日子檸檬磅蛋糕"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-800">輕日子檸檬磅蛋糕</h4>
+                </div>
+                
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="font-medium text-gray-700">淨重：</span>
+                    <span className="text-gray-600">35g</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">成分：</span>
+                    <p className="text-gray-600 leading-relaxed mt-1">台灣19號無鹽發酵奶油（乳脂、發酵菌種）、雞蛋、低筋麵粉、糖粉（砂糖、玉米澱粉）、細砂糖、檸檬汁、牛奶、鹽</p>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded-lg">
+                    <span className="font-medium text-red-700">過敏原：</span>
+                    <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
