@@ -268,7 +268,10 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background Image */}
+        {/* Desktop Banner */}
+        <div className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/BN01.jpg)'}}></div>
+        {/* Mobile Banner */}
+        <div className="block md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/michiko_BN02.jpg)'}}></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
