@@ -34,8 +34,8 @@ interface OrderData {
 const products: Product[] = [
   {
     id: 1,
-    name: "六入好日組",
-    description: "酥到掉渣的綜合選擇，都給你好日子",
+    name: "六入好日子組",
+    description: "酥到掉渣的中式雙享組合，蛋黃酥也好，綠豆椪也好，都是節日裡剛剛好的幸福選擇。",
     price: 390,
     image: "/gif_05.jpg",
     category: "組合A",
@@ -45,9 +45,9 @@ const products: Product[] = [
   },
   {
     id: 2,
-    name: "六入磅蛋糕組",
-    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕",
-    price: 399,
+    name: "七入磅蛋糕組",
+    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕 </br> 使用新鮮雞蛋與檸檬原汁手工製作</br> 中秋限量供應，售完為止。",
+    price: 420,
     image: "/6gif.jpg",
     category: "組合B",
     type: "combo",
@@ -58,7 +58,7 @@ const products: Product[] = [
     id: 3,
     name: "好日子蛋黃酥(無禮盒)",
     description: "(單入裝，無禮盒) 真材實料整顆鹹蛋黃包入，餅皮不含豬油，口感清爽不油膩",
-    price: 65,
+    price: 60,
     image: "/egg_single.jpg",
     category: "單品",
     type: "single"
@@ -369,7 +369,7 @@ function App() {
                   <h3 className="text-lg font-medium text-gray-800">保存方式</h3>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  請置於陰涼乾燥處保存，開封後請盡快食用完畢。冷藏保存可延長保鮮期，食用前回溫口感更佳。
+                  ▪ 蛋黃酥 & 磅蛋糕保存方式：請放置陰涼乾燥處，避免日照與高溫，常溫保存5天風味最佳 / 冷藏7天，若蛋黃酥冷藏建議回烤使酥皮恢復酥脆口感。
                 </p>
               </div>
             </div>
