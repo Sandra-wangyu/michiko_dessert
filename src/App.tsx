@@ -267,7 +267,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-right lg:bg-center" style={{backgroundImage: 'url(/BN01.jpg)'}}>
+      <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
