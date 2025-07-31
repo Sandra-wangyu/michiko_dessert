@@ -778,7 +778,6 @@ function App() {
 </div>
           </div>
         </div>
-      </section>
 
       {/* Cart Sidebar */}
       <CartSidebar
