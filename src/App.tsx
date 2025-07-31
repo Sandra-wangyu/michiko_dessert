@@ -477,8 +477,8 @@ function App() {
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
               <div className="text-gray-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto" style={{fontFamily: "'Noto Sans TC', cursive"}}>
                 <p className="text-lg">
-                  這次特別訂製了無膠角釘禮盒，沒有使用膠水與雙面膠，<br />
-                  從外盒到內襯，皆選用100% 再生牛奶盒紙板。
+                  這次特別訂製了無膠角釘禮盒，<br />沒有使用膠水與雙面膠，<br />
+                  從外盒到內襯，<br />皆選用100% 再生牛奶盒紙板。
                 </p>
                 <p className="text-lg">
                   LOGO 採用無墨壓印工藝，<br />不上色、不燙金，<br />
@@ -784,7 +784,7 @@ function App() {
             </a>
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="w-6 h-6" />
-              <span className="text-sm">面交地點：<br />台南市中西區</span>
+              <span className="text-sm">面交：台南市中西區</span>
             </div>
           </div>
         </div>
