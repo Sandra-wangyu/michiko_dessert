@@ -750,30 +750,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
-          <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-12"></div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center p-6">
-              <Phone className="w-8 h-8 text-amber-500 mb-4" />
-              <h3 className="text-lg font-medium text-gray-800 mb-2">電話訂購</h3>
-              <p className="text-gray-600">0912-345-678</p>
-            </div>
-            <div className="flex flex-col items-center p-6">
-              <MapPin className="w-8 h-8 text-amber-500 mb-4" />
-              <h3 className="text-lg font-medium text-gray-800 mb-2">面交地點</h3>
-              <p className="text-gray-600">台南市中西區</p>
-            </div>
-            <div className="flex flex-col items-center p-6">
-              <Clock className="w-8 h-8 text-amber-500 mb-4" />
-              <h3 className="text-lg font-medium text-gray-800 mb-2">營業時間</h3>
-              <p className="text-gray-600">週一至週日<br />9:00 - 18:00</p>
-            </div>
-          </div>
           
           {/* Social Media Links */}
           <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
@@ -797,7 +773,7 @@ function App() {
             </a>
             <div className="flex items-center gap-2 text-gray-600">
     <MapPin className="w-6 h-6" />
-    <span className="text-sm">台南市面交地點</span>
+    <span className="text-sm">面交地點：台南市中西區</span>
 </div>
           </div>
         </div>
