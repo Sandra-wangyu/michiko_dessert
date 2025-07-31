@@ -800,7 +800,6 @@ function App() {
           onSubmit={handleOrderSubmit}
         />
       )}
-    </div>
     </>
   );
 }
