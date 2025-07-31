@@ -35,7 +35,7 @@ const products: Product[] = [
   {
     id: 1,
     name: "六入好日子組",
-    description: "酥到掉渣的中式雙享組合，蛋黃酥也好，綠豆椪也好，都是節日裡剛剛好的幸福選擇。",
+    description: "酥到掉渣的中式雙享組合，<br/>蛋黃酥也好，綠豆椪也好，都是節日裡剛剛好的幸福選擇。",
     price: 390,
     image: "/gif_05.jpg",
     category: "組合A",
@@ -46,7 +46,7 @@ const products: Product[] = [
   {
     id: 2,
     name: "七入磅蛋糕組",
-    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕 </br> 使用新鮮雞蛋與檸檬原汁手工製作</br> 中秋限量供應，售完為止。",
+    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕 <br/>使用新鮮雞蛋與檸檬原汁手工製作<br/> 中秋限量供應，售完為止。",
     price: 420,
     image: "/6gif.jpg",
     category: "組合B",
