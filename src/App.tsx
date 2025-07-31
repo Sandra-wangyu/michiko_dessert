@@ -754,6 +754,79 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-amber-50 via-white to-amber-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              有任何問題或需要協助，歡迎透過以下方式與我們聯繫
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <Phone className="w-8 h-8 text-amber-500 mr-3" />
+                <h3 className="text-xl font-medium text-gray-800">聯絡資訊</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <Instagram className="w-5 h-5 text-pink-500 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-800">Instagram</div>
+                    <div className="text-gray-600">@michiko_dessert</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Facebook className="w-5 h-5 text-blue-500 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-800">Facebook</div>
+                    <div className="text-gray-600">michiko 手作甜點</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 text-red-500 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-800">服務地區</div>
+                    <div className="text-gray-600">台南市面交 / 全台宅配</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-green-500 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-800">營業時間</div>
+                    <div className="text-gray-600">週一至週日 9:00-18:00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <Heart className="w-8 h-8 text-amber-500 mr-3" />
+                <h3 className="text-xl font-medium text-gray-800">關於我們</h3>
+              </div>
+              
+              <div className="text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  michiko 手作甜點致力於提供最優質的手工甜點，每一份都是用心製作，
+                  讓您品嚐到最純粹的美味。
+                </p>
+                <p>
+                  我們堅持使用天然食材，不添加人工防腐劑，
+                  讓您吃得安心，也吃得開心。
+                </p>
+                <p>
+                  歡迎追蹤我們的社群媒體，獲得最新商品資訊和優惠活動！
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cart Sidebar */}
       <CartSidebar
