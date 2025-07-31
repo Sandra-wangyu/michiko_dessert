@@ -750,51 +750,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-amber-50 via-white to-amber-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
-            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              有任何問題或需要協助，歡迎透過以下方式與我們聯繫
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">電話聯繫</h3>
-              <p className="text-gray-600 mb-4">營業時間內歡迎來電詢問</p>
-              <a href="tel:+886-XXX-XXXXXX" className="text-amber-600 hover:text-amber-700 font-medium">
-                +886-XXX-XXXXXX
-              </a>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">面交地點</h3>
-              <p className="text-gray-600 mb-4">台南市中西區</p>
-              <p className="text-sm text-gray-500">詳細地點將於訂單確認後提供</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">營業時間</h3>
-              <div className="text-gray-600 space-y-1">
-                <p>週一至週五：09:00-18:00</p>
-                <p>週六：09:00-15:00</p>
-                <p className="text-sm text-red-500">週日公休</p>
-              </div>
-            </div>
-          </div>
           
           {/* Social Media Links */}
           <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
