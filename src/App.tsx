@@ -1263,7 +1263,6 @@ function OrderFormModal({
           <button
             type="submit"
             className="w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-full text-lg font-medium transition-colors"
-          >
             確認訂購
           </button>
         </form>
