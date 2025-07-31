@@ -734,6 +734,124 @@ function App() {
                     <span className="font-medium text-red-700">過敏原：</span>
                     <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。</p>
                   </div>
+                  <div className="mt-3">
+                    <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
+                    <div className="bg-gray-50 p-2 rounded-lg">
+                      <img 
+                        src="/in_03.jpg" 
+                        alt="營養標示"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gradient-to-br from-amber-50 via-white to-amber-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              有任何問題或需要協助，歡迎透過以下方式與我們聯繫
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <Phone className="w-8 h-8 text-amber-500 mr-3" />
+                <h3 className="text-xl font-medium text-gray-800">聯絡資訊</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <div className="font-medium text-gray-800">營業地址</div>
+                    <div className="text-gray-600">台南市</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Clock className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <div className="font-medium text-gray-800">營業時間</div>
+                    <div className="text-gray-600">週一至週日 9:00-18:00</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Instagram className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <div className="font-medium text-gray-800">Instagram</div>
+                    <div className="text-gray-600">@michiko_dessert</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <Package className="w-8 h-8 text-amber-500 mr-3" />
+                <h3 className="text-xl font-medium text-gray-800">訂購須知</h3>
+              </div>
+              
+              <div className="space-y-4 text-sm text-gray-600">
+                <div>
+                  <div className="font-medium text-gray-800 mb-1">出貨時間</div>
+                  <div>第一時段：9/10-9/13</div>
+                  <div>第二時段：9/14-9/16</div>
+                  <div>第三時段：9/17-9/19</div>
+                </div>
+                
+                <div>
+                  <div className="font-medium text-gray-800 mb-1">配送方式</div>
+                  <div>• 台南市面交（免運費）</div>
+                  <div>• 宅配（運費$180，滿$2000免運）</div>
+                </div>
+                
+                <div>
+                  <div className="font-medium text-gray-800 mb-1">付款方式</div>
+                  <div>銀行轉帳（訂單確認後提供帳戶資訊）</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-light mb-4">MICHIKO 手作甜點</h3>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-gray-300 mb-6">
+              用心製作每一份甜蜜，讓美好時光更加珍貴
+            </p>
+            
+            <div className="flex justify-center space-x-6 mb-8">
+              <a href="#" className="text-gray-300 hover:text-amber-400 transition-colors">
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-amber-400 transition-colors">
+                <Facebook className="w-6 h-6" />
+              </a>
+            </div>
+            
+            <div className="text-sm text-gray-400">
+              © 2024 MICHIKO 手作甜點. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+
       {/* Cart Sidebar */}
       <CartSidebar
         isOpen={isCartOpen}
