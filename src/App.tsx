@@ -401,7 +401,7 @@ function App() {
               <div className="space-y-4">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
                   <img 
-                    src="/S__40509455_0.jpg" 
+                    src="/gif_07.jpg" 
                     alt="精美包裝" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
