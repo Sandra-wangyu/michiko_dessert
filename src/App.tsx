@@ -172,7 +172,7 @@ function App() {
     try {
       console.log('提交訂單資料:', completeOrderData); // 除錯用
       
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxUvwscUnxk0kM8u-ErhMcCVIewVxImrokWHWFAvvky1fb-8oiKLG_fr0ugZh2o2tH9Vw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzwWFzF9UVI6MAigIc8TRwrOgRCBm4hYCQp2jjBAZKm8Gcc2HrkqNcOqd93cn0ebk81XA/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -339,12 +339,12 @@ function App() {
                   <h3 className="text-xl font-medium text-gray-800">闆娘手作，讓點心也有溫度</h3>
                 </div>
                 <div className="text-gray-600 leading-relaxed space-y-2 text-sm font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
-                  <p>✿ 每一顆都由闆娘親手製作，用心手包，酥到掉渣</p>
-                  <p>✿ 不含豬油，選用植物油與台灣LV奶油，口感清爽不油膩</p>
-                  <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎碎蛋或半顆唬弄版本！</p>
-                  <p>✿ 不吃鹹蛋？也可選擇綿密細緻的綠豆餡，內餡重達40g</p>
-                  <p>✿ 全品項皆使用台灣之光「19號奶油」，在地生產，媲美歐洲頂級奶油</p>
-                  <p>✿ 蛋奶素也可食，獨家工法卻仍能保有層次酥度</p>
+                  <p>✿ 每一顆都由闆娘手工製作，酥到掉渣</p>
+                  <p>✿ 不含豬油，選用植物油＋台灣LV奶油，清爽不膩</p>
+                  <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎蛋或半顆唬弄版本！</p>
+                  <p>✿ 不吃鹹蛋也有綿密綠豆餡可選，內餡足足40g</p>
+                  <p>✿ 全品項使用台灣之光「19號奶油」，媲美歐洲頂級奶油</p>
+                  <p>✿ 蛋奶素也可食，獨家工法也保有層次酥度</p>
                   <p className="font-medium text-amber-600">✨ 此次酥皮全面升級，真的好～酥！</p>
                 </div>
               </div>
@@ -355,7 +355,7 @@ function App() {
                   <h3 className="text-lg font-medium text-gray-800">嚴選食材</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
-                  <div>• LV等級的台灣19號奶油</div>
+                  <div>• 台灣19號奶油</div>
                   <div>• 嘉禾粉心粉</div>
                   <div>• 新鮮鹹蛋黃</div>
                   <div>• 綠豆沙餡</div>
@@ -376,55 +376,53 @@ function App() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-4">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
-                  <img 
-                    src="/S__40509450_0.jpg" 
-                    alt="手作甜點" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
-                  <img 
-                    src="/gif_03.jpg" 
-                    alt="手工製作" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-                  <img 
-                    src="/S__40509455_0.jpg" 
-                    alt="精美包裝" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-                  <img 
-                    src="/gif_06.jpg" 
-                    alt="精美包裝" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-                  <img 
-                    src="/S__40509583.jpg" 
-                    alt="精美包裝" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
-                  <img 
-                    src="/gif_02.jpg" 
-                    alt="新鮮食材" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div className="space-y-4">
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
+      <img 
+        src="/S__40509450_0.jpg" 
+        alt="手作甜點" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
+      <img 
+        src="/gif_03.jpg" 
+        alt="手工製作" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
+      <img 
+        src="/gif_02.jpg" 
+        alt="新鮮食材" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  </div>
+  <div className="space-y-4">
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+      <img 
+        src="/S__40509455_0.jpg" 
+        alt="精美包裝" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+      <img 
+        src="/gif_06.jpg" 
+        alt="精美包裝" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+      <img 
+        src="/S__40509583.jpg" 
+        alt="精美包裝" 
+        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Gift Box Section */}
