@@ -481,8 +481,8 @@ function App() {
                   從外盒到內襯，皆選用100% 再生牛奶盒紙板。
                 </p>
                 <p className="text-lg">
-                  LOGO 採用無墨壓印工藝，不上色、不燙金，<br />
-                  我們希望這份禮盒，不只是中秋後的垃圾，<br />
+                  LOGO 採用無墨壓印工藝，<br />不上色、不燙金，<br />
+                  我們希望這份禮盒，<br />不只是中秋後的垃圾，<br />
                   而是能被留下來的記憶。
                 </p>
               </div>
@@ -758,44 +758,10 @@ function App() {
             <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
             <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              有任何問題或需要協助，歡迎透過以下方式與我們聯繫
+              有任何問題或需要協助，<br />歡迎透過以下方式與我們聯繫
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Phone className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">電話聯繫</h3>
-              <p className="text-gray-600 mb-4">營業時間內歡迎來電詢問</p>
-              <a href="tel:+886-XXX-XXXXXX" className="text-amber-600 hover:text-amber-700 font-medium">
-                +886-XXX-XXXXXX
-              </a>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">面交地點</h3>
-              <p className="text-gray-600 mb-4">台南市中西區</p>
-              <p className="text-sm text-gray-500">詳細地點將於訂單確認後提供</p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Clock className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-800 mb-2">營業時間</h3>
-              <div className="text-gray-600 space-y-1">
-                <p>週一至週五：09:00 - 18:00</p>
-                <p>週六：09:00 - 15:00</p>
-                <p className="text-sm text-gray-500">週日公休</p>
-              </div>
-            </div>
-          </div>
-          
+        
           {/* Social Media Links */}
           <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
             <a 
@@ -818,7 +784,7 @@ function App() {
             </a>
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="w-6 h-6" />
-              <span className="text-sm">面交地點：台南市中西區</span>
+              <span className="text-sm">面交地點：<br />台南市中西區</span>
             </div>
           </div>
         </div>
