@@ -268,12 +268,19 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/BN01.jpg)',
-          }}
+        <div className="absolute inset-0">
+          {/* 電腦版背景 - 靜態 */}
+          <img 
+            src="/BN01.jpg" 
+            alt="michiko 手作甜點" 
+            className="hidden md:block w-full h-full object-cover opacity-90"
+          />
+          {/* 手機版背景 - 從右邊滑入動畫 */}
+          <img 
+            src="/BN01.jpg" 
+            alt="michiko 手作甜點" 
+            className="md:hidden w-full h-full object-cover opacity-90 animate-slide-in-right"
+          />
         >
           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         </div>
