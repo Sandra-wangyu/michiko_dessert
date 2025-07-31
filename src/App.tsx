@@ -35,7 +35,7 @@ const products: Product[] = [
   {
     id: 1,
     name: "六入好日子組",
-    description: "酥到掉渣的中式雙享組合，<br/>蛋黃酥也好，綠豆椪也好，都是節日裡剛剛好的幸福選擇。",
+    description: "酥到掉渣的中式雙享組合，蛋黃酥也好，綠豆椪也好，都是節日裡剛剛好的幸福選擇。",
     price: 390,
     image: "/gif_05.jpg",
     category: "組合A",
@@ -46,9 +46,7 @@ const products: Product[] = [
   {
     id: 2,
     name: "七入磅蛋糕組",
-    description: `中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕
-      使用新鮮雞蛋與檸檬原汁手工製作
-      中秋限量供應，售完為止。`,
+    description: `中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕｜使用新鮮雞蛋與檸檬原汁手工製作｜中秋限量供應，售完為止。`,
     price: 420,
     image: "/6gif.jpg",
     category: "組合B",
@@ -1152,7 +1150,7 @@ function OrderFormModal({
           <div className="bg-gray-50 p-6 rounded-xl">
             <h3 className="text-lg font-medium text-gray-800 mb-4">出貨時間</h3>
             <div className="space-y-2">
-              {['第一時段', '第二時段', '第三時段'].map(time => (
+              {['第一時段：9/8(一)依序出貨', '第二時段：9/15(一)依序出貨', '第三時段：9/22(一)依序出貨', '第四時段：9/30-10/02 僅接受台南市面交'].map(time => (
                 <label key={time} className="flex items-center">
                   <input
                     type="radio"
