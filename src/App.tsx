@@ -46,9 +46,9 @@ const products: Product[] = [
   {
     id: 2,
     name: "七入磅蛋糕組",
-    description: "中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕
+    description: `中式 x 西點甜點混搭組合，輕盈酸甜的檸檬磅蛋糕
       使用新鮮雞蛋與檸檬原汁手工製作
-      中秋限量供應，售完為止。",
+      中秋限量供應，售完為止。`,
     price: 420,
     image: "/6gif.jpg",
     category: "組合B",
