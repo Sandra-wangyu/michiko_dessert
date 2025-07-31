@@ -71,7 +71,7 @@ const products: Product[] = [
     image: "/single.jpg",
     category: "單品",
     type: "single"
-  },
+  }
 ];
 
 function App() {
@@ -376,183 +376,185 @@ function App() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-  <div className="space-y-4">
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
-      <img 
-        src="/S__40509450_0.jpg" 
-        alt="手作甜點" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
-      <img 
-        src="/gif_03.jpg" 
-        alt="手工製作" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
-      <img 
-        src="/gif_02.jpg" 
-        alt="新鮮食材" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-  </div>
-  <div className="space-y-4">
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-      <img 
-        src="/S__40509455_0.jpg" 
-        alt="精美包裝" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-      <img 
-        src="/gif_06.jpg" 
-        alt="精美包裝" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-    <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
-      <img 
-        src="/S__40509583.jpg" 
-        alt="精美包裝" 
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-  </div>
-</div>
-      </div>
-
-      {/* Gift Box Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-gray-800 mb-4">這次，我們用更環保的方式裝載心意</h2>
-            <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
-          </div>
-          
-          {/* Banner Images */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {/* First Banner */}
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/LINE_ALBUM_Michiko_250729_11.jpg" 
-                alt="精美禮盒設計" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white px-6">
-                  <h3 className="text-xl font-medium mb-2">角釘盒包裝</h3>
-                  <p className="text-sm leading-relaxed opacity-90">
-                    無膠角釘禮盒，100% 再生牛奶盒紙板<br />
-                    環保材質，溫潤質感
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Second Banner */}
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/LINE_ALBUM_Michiko_250729_12.jpg" 
-                alt="無墨壓印工藝" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white px-6">
-                  <h3 className="text-xl font-medium mb-2">無墨壓印工藝</h3>
-                  <p className="text-sm leading-relaxed opacity-90">
-                    LOGO 採用無墨壓印，不上色、不燙金<br />
-                    值得被留下來被回憶的禮盒
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="text-gray-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto" style={{fontFamily: "'Noto Sans TC', cursive"}}>
-              <p className="text-lg">
-                這次特別訂製了無膠角釘禮盒，沒有使用膠水與雙面膠，<br />
-                從外盒到內襯，皆選用100% 再生牛奶盒紙板。
-              </p>
-              <p className="text-lg">
-                LOGO 採用無墨壓印工藝，不上色、不燙金，<br />
-                我們希望這份禮盒，不只是中秋後的垃圾，<br />
-                而是能被留下來的記憶。
-              </p>
-            </div>
-          </div>
-
-          {/* 封面款式說明 */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <div className="flex items-center mb-6">
-              <Package className="w-8 h-8 text-amber-500 mr-3" />
-              <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
-            </div>
-            
-            {/* 三張角色 Banner */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* 哈欠狗 */}
-              <div className="text-center">
-                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+              <div className="space-y-4">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-100 to-gray-200">
                   <img 
-                    src="/dog_page-0001.jpg" 
-                    alt="哈欠狗封面" 
-                    className="w-full h-full object-cover"
+                    src="/S__40509450_0.jpg" 
+                    alt="手作甜點" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h4 className="text-lg font-medium mb-2 text-gray-800">哈欠狗</h4>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  慵懶可愛的哈欠表情<br />
-                  療癒系角色設計
-                </p>
-              </div>
-
-              {/* 厭世貓 */}
-              <div className="text-center">
-                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 to-amber-100">
                   <img 
-                    src="/cat2_page-0001.jpg"               
-                    alt="厭世貓封面" 
-                    className="w-full h-full object-cover"
+                    src="/gif_03.jpg" 
+                    alt="手工製作" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h4 className="text-lg font-medium mb-2 text-gray-800">厭世貓</h4>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  經典厭世表情<br />
-                  都市人的心聲代表
-                </p>
-              </div>
-
-              {/* 慵懶貓 */}
-              <div className="text-center">
-                <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-100 to-amber-200">
                   <img 
-                    src="/cat_page-0001.jpg" 
-                    alt="慵懶貓封面" 
-                    className="w-full h-full object-cover"
+                    src="/gif_02.jpg" 
+                    alt="新鮮食材" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h4 className="text-lg font-medium mb-2 text-gray-800">慵懶貓</h4>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  放鬆慵懶的姿態<br />
-                  享受悠閒時光
-                </p>
               </div>
-            </div>
-            
-            {/* 底部說明文字 */}
-            <div className="text-center text-gray-600 space-y-1 mt-6">
-              <p className="text-base">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
-              <p className="text-xs">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
+              <div className="space-y-4">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+                  <img 
+                    src="/S__40509455_0.jpg" 
+                    alt="精美包裝" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+                  <img 
+                    src="/gif_06.jpg" 
+                    alt="精美包裝" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-50 to-gray-150">
+                  <img 
+                    src="/S__40509583.jpg" 
+                    alt="精美包裝" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Gift Box Section */}
+        <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-light text-gray-800 mb-4">這次，我們用更環保的方式裝載心意</h2>
+              <div className="w-16 h-0.5 bg-amber-400 mx-auto"></div>
+            </div>
+            
+            {/* Banner Images */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {/* First Banner */}
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/LINE_ALBUM_Michiko_250729_11.jpg" 
+                  alt="精美禮盒設計" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-6">
+                    <h3 className="text-xl font-medium mb-2">角釘盒包裝</h3>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      無膠角釘禮盒，100% 再生牛奶盒紙板<br />
+                      環保材質，溫潤質感
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Banner */}
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="/LINE_ALBUM_Michiko_250729_12.jpg" 
+                  alt="無墨壓印工藝" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white px-6">
+                    <h3 className="text-xl font-medium mb-2">無墨壓印工藝</h3>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      LOGO 採用無墨壓印，不上色、不燙金<br />
+                      值得被留下來被回憶的禮盒
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
+              <div className="text-gray-600 leading-relaxed space-y-4 text-center max-w-3xl mx-auto" style={{fontFamily: "'Noto Sans TC', cursive"}}>
+                <p className="text-lg">
+                  這次特別訂製了無膠角釘禮盒，沒有使用膠水與雙面膠，<br />
+                  從外盒到內襯，皆選用100% 再生牛奶盒紙板。
+                </p>
+                <p className="text-lg">
+                  LOGO 採用無墨壓印工藝，不上色、不燙金，<br />
+                  我們希望這份禮盒，不只是中秋後的垃圾，<br />
+                  而是能被留下來的記憶。
+                </p>
+              </div>
+            </div>
+
+            {/* 封面款式說明 */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div className="flex items-center mb-6">
+                <Package className="w-8 h-8 text-amber-500 mr-3" />
+                <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
+              </div>
+              
+              {/* 三張角色 Banner */}
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                {/* 哈欠狗 */}
+                <div className="text-center">
+                  <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src="/dog_page-0001.jpg" 
+                      alt="哈欠狗封面" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-medium mb-2 text-gray-800">哈欠狗</h4>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    慵懶可愛的哈欠表情<br />
+                    療癒系角色設計
+                  </p>
+                </div>
+
+                {/* 厭世貓 */}
+                <div className="text-center">
+                  <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src="/cat2_page-0001.jpg"               
+                      alt="厭世貓封面" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-medium mb-2 text-gray-800">厭世貓</h4>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    經典厭世表情<br />
+                    都市人的心聲代表
+                  </p>
+                </div>
+
+                {/* 慵懶貓 */}
+                <div className="text-center">
+                  <div className="h-64 rounded-2xl overflow-hidden shadow-lg mb-4">
+                    <img 
+                      src="/cat_page-0001.jpg" 
+                      alt="慵懶貓封面" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h4 className="text-lg font-medium mb-2 text-gray-800">慵懶貓</h4>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    放鬆慵懶的姿態<br />
+                    享受悠閒時光
+                  </p>
+                </div>
+              </div>
+              
+              {/* 底部說明文字 */}
+              <div className="text-center text-gray-600 space-y-1 mt-6">
+                <p className="text-base">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
+                <p className="text-xs">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       {/* Products Section */}
@@ -594,7 +596,7 @@ function App() {
                             <div className="text-sm text-gray-500 mt-1">封面：{item.coverStyle}</div>
                           )}
                         </div>
-                      <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
+                        <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
                       </div>
                     </div>
                   ))}
@@ -1146,7 +1148,7 @@ function OrderFormModal({
                         <div className="text-sm text-gray-500 mt-1">封面：{item.coverStyle}</div>
                       )}
                     </div>
-                  <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
+                    <span className="font-medium text-gray-800">NT$ {item.price * item.quantity}</span>
                   </div>
                 </div>
               ))}
