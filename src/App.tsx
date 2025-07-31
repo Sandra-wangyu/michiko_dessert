@@ -636,11 +636,11 @@ function App() {
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
                       src="/egg_single.jpg" 
-                      alt="好日子蛋黃酥"
+                      alt="好日子蛋黃酥 (蛋奶素)"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-lg font-medium text-gray-800">好日子蛋黃酥</h4>
+                  <h4 className="text-lg font-medium text-gray-800">好日子蛋黃酥 (蛋奶素)</h4>
                 </div>
                 
                 <div className="space-y-3 text-sm">
@@ -675,11 +675,11 @@ function App() {
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
                       src="/single.jpg" 
-                      alt="好日子綠豆椪"
+                      alt="好日子綠豆椪 (蛋奶素)"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-lg font-medium text-gray-800">好日子綠豆椪</h4>
+                  <h4 className="text-lg font-medium text-gray-800">好日子綠豆椪 (蛋奶素)</h4>
                 </div>
                 
                 <div className="space-y-3 text-sm">
@@ -714,11 +714,11 @@ function App() {
                   <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full mx-auto mb-3 flex items-center justify-center overflow-hidden">
                     <img 
                       src="/S__40509583.jpg" 
-                      alt="輕日子檸檬磅蛋糕"
+                      alt="輕日子檸檬磅蛋糕 (蛋奶素)"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-lg font-medium text-gray-800">輕日子檸檬磅蛋糕</h4>
+                  <h4 className="text-lg font-medium text-gray-800">輕日子檸檬磅蛋糕 (蛋奶素)</h4>
                 </div>
                 
                 <div className="space-y-3 text-sm">
