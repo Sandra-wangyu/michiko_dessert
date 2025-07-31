@@ -826,9 +826,9 @@ function App() {
 }
 
 // Product Card Component
-function ProductCard({ product, onAddToCart }: { 
-  product: Product; 
-  onAddToCart: (product: Product, quantity: number, selectedOption?: string, coverStyle?: string) => void 
+function ProductCard({ product, onAddToCart }: {
+  product: Product;
+  onAddToCart: (product: Product, quantity: number, selectedOption?: string, coverStyle?: string) => void;
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedOption, setSelectedOption] = useState(product.options?.[0] || '');
