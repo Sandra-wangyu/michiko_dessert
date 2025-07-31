@@ -340,10 +340,9 @@ function App() {
                 </div>
                 <div className="text-gray-600 leading-relaxed space-y-2 text-sm font-light" style={{fontFamily: "'Noto Sans TC', cursive"}}>
                   <p>✿ 每一顆都由闆娘手工製作，酥到掉渣</p>
-                  <p>✿ 不含豬油，選用植物油＋台灣LV奶油，清爽不膩</p>
+                  <p>✿ 不含豬油，選用植物油＋台灣LV等級「19號奶油」，清爽不膩</p>
                   <p>✿ 真材實料「整顆鹹蛋黃」包入，絕非碎蛋或半顆唬弄版本！</p>
                   <p>✿ 不吃鹹蛋也有綿密綠豆餡可選，內餡足足40g</p>
-                  <p>✿ 全品項使用台灣之光「19號奶油」，媲美歐洲頂級奶油</p>
                   <p>✿ 蛋奶素也可食，獨家工法也保有層次酥度</p>
                   <p className="font-medium text-amber-600">✨ 此次酥皮全面升級，真的好～酥！</p>
                 </div>
@@ -355,7 +354,7 @@ function App() {
                   <h3 className="text-lg font-medium text-gray-800">嚴選食材</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-sm text-gray-600">
-                  <div>• 台灣19號奶油</div>
+                  <div>• 台灣之光「19號奶油」</div>
                   <div>• 嘉禾粉心粉</div>
                   <div>• 新鮮鹹蛋黃</div>
                   <div>• 綠豆沙餡</div>
@@ -493,7 +492,7 @@ function App() {
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
               <div className="flex items-center mb-6">
                 <Package className="w-8 h-8 text-amber-500 mr-3" />
-                <h3 className="text-xl font-medium text-gray-800">🐾 封面款式說明</h3>
+                <h3 className="text-xl font-medium text-gray-800">封面款式說明</h3>
               </div>
               
               {/* 三張角色 Banner */}
@@ -550,7 +549,7 @@ function App() {
               {/* 底部說明文字 */}
               <div className="text-center text-gray-600 space-y-1 mt-6">
                 <p className="text-base">三款角色封面任選：哈欠狗、厭世貓、慵懶貓</p>
-                <p className="text-xs">適用所有組合｜如需指定請於備註說明，若未指定將隨機出貨。</p>
+                <p className="text-xs">適用所有禮盒組合(單入裝則無)｜如需指定請於下單時選擇，若未指定將隨機出貨。</p>
               </div>
             </div>
           </div>
@@ -796,6 +795,10 @@ function App() {
               <Instagram className="w-6 h-6" />
               <span className="text-sm">michiko咪匠人好食</span>
             </a>
+            <div className="flex items-center gap-2 text-gray-600">
+    <MapPin className="w-6 h-6" />
+    <span className="text-sm">台南市面交地點</span>
+</div>
           </div>
         </div>
       </section>
