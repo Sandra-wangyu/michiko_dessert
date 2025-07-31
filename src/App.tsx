@@ -734,51 +734,6 @@ function App() {
                     <span className="font-medium text-red-700">過敏原：</span>
                     <p className="text-red-600 text-xs leading-relaxed mt-1">本產品含有蛋類、奶類、小麥及其製品，不適合其過敏體質者食用。</p>
                   </div>
-                  <div className="mt-3">
-                    <span className="font-medium text-gray-700 block mb-2">營養標示：</span>
-                    <div className="bg-gray-50 p-2 rounded-lg">
-                      <img 
-                        src="/in_03.jpg" 
-                        alt="營養標示"
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-          
-          {/* Social Media Links */}
-          <div className="col-span-full flex justify-center items-center gap-8 mt-8 pt-8 border-t border-gray-200">
-            <a 
-              href="https://www.facebook.com/michikodessert/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
-            >
-              <Facebook className="w-6 h-6" />
-              <span className="text-sm">michiko咪匠人好食</span>
-            </a>
-            <a 
-              href="https://www.instagram.com/michiko_dessert/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition-colors duration-200"
-            >
-              <Instagram className="w-6 h-6" />
-              <span className="text-sm">michiko咪匠人好食</span>
-            </a>
-            <div className="flex items-center gap-2 text-gray-600">
-    <MapPin className="w-6 h-6" />
-    <span className="text-sm">面交地點：台南市中西區</span>
-</div>
-          </div>
-        </div>
-      </section>
-
       {/* Cart Sidebar */}
       <CartSidebar
         isOpen={isCartOpen}
