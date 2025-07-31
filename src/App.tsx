@@ -207,10 +207,11 @@ function App() {
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
+        style={{
+          backgroundImage: window.innerWidth < 768 ? 
+            'url(/michiko_BN03.jpg)' : 
+            'url(/BN01.jpg)'
+        }}
       }
     };
 
