@@ -219,6 +219,7 @@ function App() {
   }, []);
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
@@ -801,6 +802,7 @@ function App() {
         />
       )}
     </div>
+    </>
   );
 }
 
