@@ -423,7 +423,7 @@ function App() {
     </div>
   </div>
 </div>
-      </section>
+      </div>
 
       {/* Gift Box Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
