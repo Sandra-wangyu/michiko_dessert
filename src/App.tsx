@@ -268,7 +268,12 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Desktop Banner */}
+        className="relative h-screen bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: window.innerWidth >= 768 
+            ? "url('/BN01.jpg')" 
+            : "url('/michiko_BN03.jpg')"
+        }}
         <div className="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/BN01.jpg)'}}></div>
         {/* Mobile Banner */}
         <div className="block md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/michiko_BN03.jpg)'}}></div>
@@ -291,7 +296,7 @@ function App() {
               用心製作每一份甜蜜<br />
               讓美好時光更加珍貴
             </p>
-            
+              className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center text-white text-sm">
                 <Award className="w-4 h-4 mr-2 text-amber-500" />
