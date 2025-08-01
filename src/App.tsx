@@ -77,13 +77,6 @@ const products: Product[] = [
 function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [orderForm, setOrderForm] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    address: '',
-    notes: ''
-  });
   const [showOrderForm, setShowOrderForm] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -150,66 +143,11 @@ function App() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  const handleOrderSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // 檢查購物車是否為空
-    if (cart.length === 0) {
-      alert('請先將商品加入購物車');
-      return;
-    }
-    
-    // 檢查必填欄位
-    if (!orderForm.name || !orderForm.phone) {
-      alert('請填寫姓名和電話');
-      return;
-    }
-    
-    // 準備訂單資訊
-    const orderDetails = cart.map(item => 
-      `${item.name} x ${item.quantity} = NT$${item.price * item.quantity}`
-    ).join('\n');
-    
-    const totalAmount = getTotalPrice();
-    
-    const message = `
-【michiko 手作甜點 訂購單】
-
-訂購人：${orderForm.name}
-電話：${orderForm.phone}
-${orderForm.email ? `Email：${orderForm.email}` : ''}
-${orderForm.address ? `地址：${orderForm.address}` : ''}
-
-訂購商品：
-${orderDetails}
-
-總金額：NT$${totalAmount}
-
-${orderForm.notes ? `備註：${orderForm.notes}` : ''}
-    `.trim();
-    
-    // 使用 LINE 或 WhatsApp 發送訂單
-    const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
-    window.open(lineUrl, '_blank');
-    
-    // 清空購物車和表單
-    setCart([]);
-    setOrderForm({
-      name: '',
-      phone: '',
-      email: '',
-      address: '',
-      notes: ''
-    });
-    setShowOrderForm(false);
-    setIsCartOpen(false);
-  };
-
   const getTotalItems = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
-  const handleOrderSubmit2 = async (orderData: OrderData) => {
+  const handleOrderSubmit = async (orderData: OrderData) => {
     const subtotal = getTotalPrice();
     const shippingFee = orderData.deliveryMethod === '宅配' && subtotal < 2000 ? 180 : 0;
     
@@ -871,108 +809,8 @@ ${orderForm.notes ? `備註：${orderForm.notes}` : ''}
         <OrderFormModal
           cart={cart}
           onClose={() => setShowOrderForm(false)}
-          onSubmit={handleOrderSubmit2}
+          onSubmit={handleOrderSubmit}
         />
-      )}
-
-      {/* 訂購表單 Modal */}
-      {showOrderForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-bold">填寫訂購資訊</h3>
-              <button
-                onClick={() => setShowOrderForm(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                <X size={24} />
-              </button>
-            </div>
-            
-            <form onSubmit={handleOrderSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">姓名 *</label>
-                <input
-                  type="text"
-                  required
-                  value={orderForm.name}
-                  onChange={(e) => setOrderForm({...orderForm, name: e.target.value})}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">電話 *</label>
-                <input
-                  type="tel"
-                  required
-                  value={orderForm.phone}
-                  onChange={(e) => setOrderForm({...orderForm, phone: e.target.value})}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
-                <input
-                  type="email"
-                  value={orderForm.email}
-                  onChange={(e) => setOrderForm({...orderForm, email: e.target.value})}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">地址</label>
-                <input
-                  type="text"
-                  value={orderForm.address}
-                  onChange={(e) => setOrderForm({...orderForm, address: e.target.value})}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">備註</label>
-                <textarea
-                  value={orderForm.notes}
-                  onChange={(e) => setOrderForm({...orderForm, notes: e.target.value})}
-                  rows={3}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-              </div>
-              
-              <div className="border-t pt-4">
-                <div className="text-sm text-gray-600 mb-2">訂購明細：</div>
-                {cart.map((item) => (
-                  <div key={item.id} className="flex justify-between text-sm">
-                    <span>{item.name} x {item.quantity}</span>
-                    <span>NT${item.price * item.quantity}</span>
-                  </div>
-                ))}
-                <div className="border-t mt-2 pt-2 font-bold">
-                  總計：NT${getTotalPrice()}
-                </div>
-              </div>
-              
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => setShowOrderForm(false)}
-                  className="flex-1 border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  取消
-                </button>
-                <button
-                  type="submit"
-                  className="flex-1 bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600 transition-colors"
-                >
-                  確認訂購
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
       )}
     </>
   );
