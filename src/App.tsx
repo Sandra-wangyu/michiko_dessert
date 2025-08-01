@@ -588,7 +588,7 @@ function App() {
               </div>
               
               <div className="mt-4">
-                <h4 className="font-medium text-gray-800 mb-2">運費計算：</h4>
+                <h3 className="text-xl font-semibold mb-4 text-amber-800">運費計算</h3>
                 <p className="text-gray-600">常溫運費 $180，總訂購金額滿 $2000 免收運費</p>
               </div>
             </div>
