@@ -556,7 +556,7 @@ function App() {
         </section>
       </section>
         {/* 出貨資訊 */}
-        <section className="py-16 bg-white">
+        <div className="bg-white rounded-lg shadow-md p-6 mt-4">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-amber-800">出貨資訊</h2>
             <div className="bg-amber-50 rounded-lg p-8">
