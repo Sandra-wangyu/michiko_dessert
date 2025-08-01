@@ -562,7 +562,8 @@ function App() {
             <div className="bg-amber-50 rounded-lg p-8">
               <div className="mb-6">
                 <h3 className="text-xl font-semibold mb-3 text-amber-800">出貨方式</h3>
-                <p className="text-gray-700">宅配　ｏｒ　台南市面交（地點中西區）</p>
+                <p className="text-gray-700">常溫宅配 或 台南市面交（地點中西區，訂購後會提供詳細地址）</p>
+                <p className="text-gray-400">*出貨前會MAIL通知出貨</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-amber-800">出貨時段</h3>
