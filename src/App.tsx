@@ -587,7 +587,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
 
       {/* Products Section */}
