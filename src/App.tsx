@@ -689,6 +689,10 @@ function App() {
                     <span className="text-gray-600">75g</span>
                   </div>
                   <div>
+                    <span className="font-medium text-gray-700">產地：</span>
+                    <span className="text-gray-600">台灣</span>
+                  </div>
+                  <div>
                     <span className="font-medium text-gray-700">成分：</span>
                     <p className="text-gray-600 leading-relaxed mt-1">烏豆沙餡〔圓雲豆、蔗糖、麥芽糖、台灣19號奶油、大豆油、甜味劑(赤藻醣醇)、海藻糖、麥芽糊精、玫瑰鹽、黏稠劑(玉米糖膠)〕、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、鹹蛋黃（含花生油）、砂糖、水、蛋黃、黑芝麻</p>
                   </div>
@@ -728,6 +732,10 @@ function App() {
                     <span className="text-gray-600">70g</span>
                   </div>
                   <div>
+                    <span className="font-medium text-gray-700">產地：</span>
+                    <span className="text-gray-600">台灣</span>
+                  </div>
+                  <div>
                     <span className="font-medium text-gray-700">成分：</span>
                     <p className="text-gray-600 leading-relaxed mt-1">綠豆沙（綠豆、砂糖、食用油、鹽）、嘉禾中筋粉心粉、低筋麵粉、台灣19號無水奶油、玄米油、砂糖、水</p>
                   </div>
@@ -765,6 +773,10 @@ function App() {
                   <div>
                     <span className="font-medium text-gray-700">淨重：</span>
                     <span className="text-gray-600">35g</span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">產地：</span>
+                    <span className="text-gray-600">台灣</span>
                   </div>
                   <div>
                     <span className="font-medium text-gray-700">成分：</span>
