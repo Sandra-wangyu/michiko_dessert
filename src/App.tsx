@@ -552,6 +552,11 @@ function App() {
                 <p className="text-xs">適用所有禮盒組合(單入裝則無)｜如需指定請於下單時選擇，若未指定將隨機出貨。</p>
               </div>
             </div>
+            
+            <div className="mt-4">
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">運費計算：</h3>
+              <p className="text-gray-700">常溫運費 $180，總訂購金額滿 $2000 免收運費</p>
+            </div>
           </div>
         </section>
       </section>
