@@ -172,7 +172,7 @@ function App() {
     try {
       console.log('提交訂單資料:', completeOrderData); // 除錯用
       
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzimge690HCVRtNoI8NhhUxnilFxxkfnOAoiPYqKTuzoT0_Fv8y6b9OykK4p_PzGp_9Hw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxNqX6DOFFJZUtpXGmeW9w3dfOfp38XzKcbV56cdSbsHMaP0nentzfgRgeusig1iE4zJg/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
