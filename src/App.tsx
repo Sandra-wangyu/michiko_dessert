@@ -555,6 +555,40 @@ function App() {
           </div>
         </section>
       </section>
+        {/* 出貨資訊 */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-amber-800">出貨資訊</h2>
+            <div className="bg-amber-50 rounded-lg p-8">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 text-amber-800">出貨方式</h3>
+                <p className="text-gray-700">宅配　ｏｒ　台南市面交（地點中西區）</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-amber-800">出貨時段</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mr-4">第一時段</span>
+                    <span className="text-gray-700">9/8(一)依序出貨</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mr-4">第二時段</span>
+                    <span className="text-gray-700">9/15(一)依序出貨</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-medium mr-4">第三時段</span>
+                    <span className="text-gray-700">9/22(一)依序出貨</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium mr-4">第四時段</span>
+                    <span className="text-gray-700">9/30-10/02 僅接受台南市面交</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
       {/* Products Section */}
       <section id="products" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
