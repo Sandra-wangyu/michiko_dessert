@@ -1096,12 +1096,15 @@ function OrderFormModal({
                     訂購人電話 *
                   </label>
                   <input
-                    type="tel"
-                    required
-                    value={formData.customerPhone}
-                    onChange={(e) => setFormData({...formData, customerPhone: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                  />
+  type="tel"
+  required
+  pattern="09[0-9]{8}"
+  title="請輸入台灣手機號碼格式（09開頭10位數字）"
+  placeholder="0912345678"
+  value={formData.customerPhone}
+  onChange={(e) => setFormData({...formData, customerPhone: e.target.value})}
+  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+/>
                 </div>
               </div>
               <div>
@@ -1109,13 +1112,15 @@ function OrderFormModal({
                   電子信箱 *
                 </label>
                 <input
-                  type="email"
-                  required
-                  value={formData.customerEmail}
-                  onChange={(e) => setFormData({...formData, customerEmail: e.target.value})}
-                  placeholder="example@email.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                />
+  type="email"
+  required
+  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+  title="請輸入正確的電子信箱格式"
+  value={formData.customerEmail}
+  onChange={(e) => setFormData({...formData, customerEmail: e.target.value})}
+  placeholder="example@email.com"
+  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+/>
                 <p className="text-xs text-gray-500 mt-1">
                   💡 我們會將匯款資訊發送至此信箱
                 </p>
