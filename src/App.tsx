@@ -77,6 +77,14 @@ const products: Product[] = [
 function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [orderForm, setOrderForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    notes: ''
+  });
+  const [showOrderForm, setShowOrderForm] = useState(false);
   const [showOrderForm, setShowOrderForm] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -141,6 +149,61 @@ function App() {
 
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
+  const handleOrderSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // 檢查購物車是否為空
+    if (cart.length === 0) {
+      alert('請先將商品加入購物車');
+      return;
+    }
+    
+    // 檢查必填欄位
+    if (!orderForm.name || !orderForm.phone) {
+      alert('請填寫姓名和電話');
+      return;
+    }
+    
+    // 準備訂單資訊
+    const orderDetails = cart.map(item => 
+      `${item.name} x ${item.quantity} = NT$${item.price * item.quantity}`
+    ).join('\n');
+    
+    const totalAmount = getTotalPrice();
+    
+    const message = `
+【michiko 手作甜點 訂購單】
+
+訂購人：${orderForm.name}
+電話：${orderForm.phone}
+${orderForm.email ? `Email：${orderForm.email}` : ''}
+${orderForm.address ? `地址：${orderForm.address}` : ''}
+
+訂購商品：
+${orderDetails}
+
+總金額：NT$${totalAmount}
+
+${orderForm.notes ? `備註：${orderForm.notes}` : ''}
+    `.trim();
+    
+    // 使用 LINE 或 WhatsApp 發送訂單
+    const lineUrl = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
+    window.open(lineUrl, '_blank');
+    
+    // 清空購物車和表單
+    setCart([]);
+    setOrderForm({
+      name: '',
+      phone: '',
+      email: '',
+      address: '',
+      notes: ''
+    });
+    setShowOrderForm(false);
+    setIsCartOpen(false);
   };
 
   const getTotalItems = () => {
