@@ -85,7 +85,6 @@ function App() {
     notes: ''
   });
   const [showOrderForm, setShowOrderForm] = useState(false);
-  const [showOrderForm, setShowOrderForm] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   const addToCart = (product: Product, quantity: number = 1) => {
