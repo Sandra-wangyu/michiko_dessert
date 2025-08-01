@@ -1098,19 +1098,8 @@ function OrderFormModal({
                   <input
   type="tel"
   required
-  pattern="09[0-9]{8}"
-  title="請輸入台灣手機號碼格式（09開頭10位數字）"
-  placeholder="0912345678"
   value={formData.customerPhone}
   onChange={(e) => setFormData({...formData, customerPhone: e.target.value})}
-  onBlur={(e) => {
-    const phoneRegex = /^09\d{8}$/;
-    if (e.target.value && !phoneRegex.test(e.target.value)) {
-      e.target.setCustomValidity('請輸入正確的台灣手機號碼格式（例：0912345678）');
-    } else {
-      e.target.setCustomValidity('');
-    }
-  }}
   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
 />
                 </div>
@@ -1122,18 +1111,8 @@ function OrderFormModal({
                 <input
   type="email"
   required
-  pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-  title="請輸入正確的電子信箱格式"
   value={formData.customerEmail}
   onChange={(e) => setFormData({...formData, customerEmail: e.target.value})}
-  onBlur={(e) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (e.target.value && !emailRegex.test(e.target.value)) {
-      e.target.setCustomValidity('請輸入正確的電子信箱格式');
-    } else {
-      e.target.setCustomValidity('');
-    }
-  }}
   placeholder="example@email.com"
   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
 />
