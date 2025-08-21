@@ -956,10 +956,10 @@ function ProductCard({ product, onAddToCart }: {
         )}
         
         <button
-          onClick={handleAddToCart}
-          className="w-full bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-full font-medium transition-colors"
+          disabled
+          className="w-full bg-gray-400 text-white py-3 px-6 rounded-lg cursor-not-allowed font-medium"
         >
-          加入購物車
+          中秋已截單
         </button>
       </div>
     </div>
