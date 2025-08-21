@@ -280,4 +280,26 @@ function App() {
         
         <div className="max-w-7xl mx-auto px-4 w-full">
           <div className="text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl font-light
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-6">
+              MICHIKO
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
+              手作甜點・用心製作每一份美好
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#products"
+                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200"
+              >
+                立即選購
+              </a>
+              <a
+                href="#intro"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-full font-medium transition-colors duration-200"
+              >
+                了解更多
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
