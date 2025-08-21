@@ -283,3 +283,12 @@ function App() {
             <h1 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-wide">
               MICHIKO 手作甜點
             </h1>
+          </div>
+        </div>
+      </section>
+    </div>
+    </>
+  );
+}
+
+export default App;
