@@ -303,3 +303,9 @@ function App() {
           </div>
         </div>
       </section>
+    </div>
+    </>
+  );
+}
+
+export default App;
