@@ -326,15 +326,4 @@ function App() {
               </div>
               <div className="space-y-3">
                 <p><strong>每一樣食材都看得懂，<br />每一口用心都吃得到。</strong></p>
-                <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與對品質的承諾。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    </>
-  );
-}
-
-export default App;
+                <p>我媽常說：「要做自己也敢吃的，才算對。」<br />所以你吃到的每一份甜點，<br />不只是好吃，<br />更是我們對食材的堅持，與
