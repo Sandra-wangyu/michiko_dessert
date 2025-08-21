@@ -555,6 +555,7 @@ function App() {
           </div>
         </section>
       </section>
+
         {/* 出貨資訊 */}
         <div className="bg-white rounded-lg shadow-md p-6 mt-4">
           <div className="max-w-4xl mx-auto px-4">
@@ -587,7 +588,7 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
 
       {/* Products Section */}
