@@ -332,6 +332,257 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-800 mb-4">甜點選購</h2>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              精心製作的手工甜點，每一口都是對品質的堅持
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {products.map(product => (
+              <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                <div className="aspect-w-16 aspect-h-12 bg-gray-200">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-xl font-semibold text-gray-800">{product.name}</h3>
+                    <span className="text-2xl font-bold text-amber-600">${product.price}</span>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{product.description}</p>
+                  
+                  {product.hasVariants && product.options && (
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">選擇組合：</label>
+                      <select className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        {product.options.map((option, index) => (
+                          <option key={index} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+                  
+                  {/* 中秋已截單按鈕 */}
+                  <button
+                    disabled
+                    className="w-full bg-gray-400 text-white py-3 px-6 rounded-lg font-medium cursor-not-allowed"
+                  >
+                    中秋已截單
+                  </button>
+                  
+                  {/* 原本的加入購物車按鈕 - 保留以備後用
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center border border-gray-300 rounded-lg">
+                      <button
+                        onClick={() => updateQuantity(product.id, Math.max(1, quantity - 1))}
+                        className="p-2 hover:bg-gray-100 transition-colors"
+                      >
+                        <Minus className="w-4 h-4" />
+                      </button>
+                      <span className="px-4 py-2 font-medium">{quantity}</span>
+                      <button
+                        onClick={() => updateQuantity(product.id, quantity + 1)}
+                        className="p-2 hover:bg-gray-100 transition-colors"
+                      >
+                        <Plus className="w-4 h-4" />
+                      </button>
+                    </div>
+                    <button
+                      onClick={() => addToCart(product, quantity)}
+                      className="flex-1 bg-amber-500 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-medium transition-colors flex items-center justify-center"
+                    >
+                      <ShoppingCart className="w-4 h-4 mr-2" />
+                      加入購物車
+                    </button>
+                  </div>
+                  */}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-800 mb-4">聯絡方式</h2>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-gray-600">歡迎與我們聯繫，讓我們為您提供最好的服務</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">聯絡資訊</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-amber-500 mr-3" />
+                  <span className="text-gray-600">0912-345-678</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 text-amber-500 mr-3" />
+                  <span className="text-gray-600">台北市信義區</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-amber-500 mr-3" />
+                  <span className="text-gray-600">週一至週五 9:00-18:00</span>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <h4 className="text-lg font-medium text-gray-800 mb-4">社群媒體</h4>
+                <div className="flex space-x-4">
+                  <a href="#" className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="p-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">配送資訊</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <Package className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-gray-800">宅配服務</h4>
+                    <p className="text-gray-600 text-sm">全台宅配，滿2000元免運費</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Clock className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-gray-800">配送時間</h4>
+                    <p className="text-gray-600 text-sm">1-3個工作天內送達</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Star className="w-5 h-5 text-amber-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-gray-800">品質保證</h4>
+                    <p className="text-gray-600 text-sm">新鮮製作，品質保證</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">MICHIKO</h3>
+            <p className="text-gray-400 mb-6">用心製作每一份甜蜜</p>
+            <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
+            <p className="text-gray-400 text-sm">
+              © 2024 MICHIKO 手作甜點. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Shopping Cart Sidebar */}
+      {isCartOpen && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsCartOpen(false)}></div>
+          <div className="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl">
+            <div className="flex flex-col h-full">
+              <div className="flex items-center justify-between p-6 border-b">
+                <h2 className="text-xl font-semibold">購物車</h2>
+                <button
+                  onClick={() => setIsCartOpen(false)}
+                  className="p-2 hover:bg-gray-100 rounded-full"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto p-6">
+                {cart.length === 0 ? (
+                  <p className="text-gray-500 text-center">購物車是空的</p>
+                ) : (
+                  <div className="space-y-4">
+                    {cart.map(item => (
+                      <div key={item.id} className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-16 h-16 object-cover rounded-lg"
+                        />
+                        <div className="flex-1">
+                          <h3 className="font-medium text-gray-800">{item.name}</h3>
+                          <p className="text-sm text-gray-600">${item.price}</p>
+                          <div className="flex items-center mt-2">
+                            <button
+                              onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                              className="p-1 hover:bg-gray-200 rounded"
+                            >
+                              <Minus className="w-4 h-4" />
+                            </button>
+                            <span className="mx-3 font-medium">{item.quantity}</span>
+                            <button
+                              onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              className="p-1 hover:bg-gray-200 rounded"
+                            >
+                              <Plus className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => removeFromCart(item.id)}
+                          className="p-2 text-red-500 hover:bg-red-50 rounded-full"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {cart.length > 0 && (
+                <div className="border-t p-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-lg font-semibold">總計</span>
+                    <span className="text-xl font-bold text-amber-600">${getTotalPrice()}</span>
+                  </div>
+                  <button
+                    onClick={() => setShowOrderForm(true)}
+                    className="w-full bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-lg font-medium transition-colors"
+                  >
+                    結帳
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Order Form Modal */}
+      {showOrderForm && (
+        <OrderForm
+          cart={cart}
+          onSubmit={handleOrderSubmit}
+          onClose={() => setShowOrderForm(false)}
+        />
+      )}
     </div>
     </>
   );
