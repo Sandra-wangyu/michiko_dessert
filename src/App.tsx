@@ -280,4 +280,6 @@ function App() {
         
         <div className="max-w-7xl mx-auto px-4 w-full">
           <div className="text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl font-light
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-6 tracking-wide">
+              MICHIKO 手作甜點
+            </h1>
